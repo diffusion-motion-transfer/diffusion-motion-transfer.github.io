@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>Space-Time Diffusion Features for Zero-Shot Text-Driven Motion Transfer</title>
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Space-Time Diffusion Features for Zero-Shot Text-Driven Motion Transfer</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a target="_blank">Anonymous Submisssion</a>
+              </span>
+            </div>
+                    <!-- Supplementary PDF link -->
+                    <span class="link-block">
+                      <a href="sm/sm.html" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span>Supplementary Material</span>
+                    </a>
+                  </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Teaser video-->
+
+
+        <!-- Video grid -->
+
+<section class="hero is-light">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column">
+          <h2 class="title is-3">Motion Transfer results</h2>
+          <div class="content has-text-justified">
+            <td colspan="3">
+              <p style="margin-top: -12px;">
+                Hover over the videos to see the original video and text prompts. Please see our <a href="./sm/supp.html"><strong>Supplementary Materials</strong></a> for more results.</p>
+              </p>
+            </td>
+  <!-- </td> -->
+    <div class="video-wrapper">
+      <video preload="auto"class="hover-video" src="assets/results/dog/original.mp4" preload="metadata" autoplay loop muted> </video>
+      <video preload="auto"class="default-video" src="assets/results/dog/lion.mp4" preload="metadata" autoplay controls loop muted></video>
+      <div class="overlay-text">A lion sitting in a forest</div>
+    </div>
+    <div class="video-wrapper">
+      <video preload="auto"class="hover-video" src="assets/results/dog/original.mp4" preload="metadata" autoplay loop muted> </video>
+      <video preload="auto"class="default-video" src="assets/results/dog/dragon.mp4" preload="metadata" autoplay controls loop muted></video>
+      <div class="overlay-text">A dragon sitting in a floral forest</div>
+    </div>
+    <div class="video-wrapper">
+      <video preload="auto"class="hover-video" src="assets/results/car-turn/original.mp4" preload="metadata" autoplay loop muted> </video>
+      <video preload="auto"class="default-video" src="assets/results/car-turn/bike.mp4" preload="metadata" autoplay controls loop muted></video>
+      <div class="overlay-text">A bike driving in a snowy forest</div>
+    </div>
+      <div class="video-wrapper">
+        <video preload="auto"class="hover-video" src="assets/results/car-turn/original.mp4" preload="metadata" autoplay loop muted> </video>
+        <video preload="auto"class="default-video" src="assets/results/car-turn/train.mp4" preload="metadata" autoplay controls loop muted></video>
+        <div class="overlay-text">A train riding on rails in autumn view</div>
+      </div>
+    <div class="video-wrapper">
+      <video preload="auto"class="default-video" src="assets/results/dog_jump/horse.mp4" preload="metadata" autoplay loop muted> </video>
+      <video preload="auto"class="hover-video" src="assets/results/dog_jump/original.mp4" preload="metadata" autoplay controls loop muted></video>
+      <div class="overlay-text">A horse jumping into a river</div>
+    </div>
+    <div class="video-wrapper">
+      <video preload="auto"class="default-video" src="assets/results/dog_jump/dolphin.mp4" preload="metadata" autoplay loop muted> </video>
+      <video preload="auto"class="hover-video" src="assets/results/dog_jump/original.mp4" preload="metadata" autoplay controls loop muted></video>
+      <div class="overlay-text">A dolphin jumping into the ocean</div>
+    </div>
+    <div class="video-wrapper">
+      <video preload="auto"class="hover-video" src="assets/results/cute_kittens/original.mp4" preload="metadata" autoplay loop muted> </video>
+      <video preload="auto"class="default-video" src="assets/results/cute_kittens/monkeys.mp4" preload="metadata" autoplay controls loop muted></video>
+      <div class="overlay-text">Monkeys playing with coconuts</div>
+    </div>
+    <div class="video-wrapper">
+      <video preload="auto"class="default-video" src="assets/results/cute_kittens/rabbits.mp4" preload="metadata" autoplay loop muted> </video>
+      <video preload="auto"class="hover-video" src="assets/results/cute_kittens/original.mp4" preload="metadata" autoplay controls loop muted></video>
+      <div class="overlay-text">Rabbits playing with easter egg</div>
+    </div>
+    <div class="video-wrapper">
+      <video preload="auto"class="hover-video" src="assets/results/elephant/original.mp4" preload="metadata" autoplay loop muted> </video>
+      <video preload="auto"class="default-video" src="assets/results/elephant/camel.mp4" preload="metadata" autoplay controls loop muted></video>
+      <div class="overlay-text">A camel crossing a road in a savannah</div>
+    </div>
+    <div class="video-wrapper">
+      <video preload="auto"class="hover-video" src="assets/results/elephant/original.mp4" preload="metadata" autoplay loop muted> </video>
+      <video preload="auto"class="default-video" src="assets/results/elephant/giraffe.mp4" preload="metadata" autoplay controls loop muted></video>
+      <div class="overlay-text">A giraffe crossing a road in a savannah</div>
+    </div>
+    <div class="video-wrapper">
+      <video preload="auto"class="hover-video" src="assets/results/frisbee_dog/original.mp4" preload="metadata" autoplay loop muted> </video>
+      <video preload="auto"class="default-video" src="assets/results/frisbee_dog/bear.mp4" preload="metadata" autoplay controls loop muted></video>
+      <div class="overlay-text">A bear catching a frisbee in the field</div>
+    </div>
+    <div class="video-wrapper">
+      <video preload="auto"class="hover-video" src="assets/results/frisbee_dog/original.mp4" preload="metadata" autoplay loop muted> </video>
+      <video preload="auto"class="default-video" src="assets/results/frisbee_dog/cat.mp4" preload="metadata" autoplay controls loop muted></video>
+      <div class="overlay-text">A cat catching a frisbee in the field</div>
+    </div>
+    <div class="video-wrapper">
+      <video preload="auto"class="hover-video" src="assets/results/locomotive/original.mp4" preload="metadata" autoplay loop muted> </video>
+      <video preload="auto"class="default-video" src="assets/results/locomotive/airplane.mp4" preload="metadata" autoplay controls loop muted></video>
+      <div class="overlay-text">An airplane driving in a forest</div>
+    </div>
+    <div class="video-wrapper">
+      <video preload="auto"class="hover-video" src="assets/results/locomotive/original.mp4" preload="metadata" autoplay loop muted> </video>
+      <video preload="auto"class="default-video" src="assets/results/locomotive/motorbike.mp4" preload="metadata" autoplay controls loop muted></video>
+      <div class="overlay-text">A motorbike driving in a forest</div>
+    </div>
+    <div class="video-wrapper">
+      <video preload="auto"class="hover-video" src="assets/results/rubber_duck/original.mp4" preload="metadata" autoplay loop muted> </video>
+      <video preload="auto"class="default-video" src="assets/results/rubber_duck/penguin.mp4" preload="metadata" autoplay controls loop muted></video>
+      <div class="overlay-text">A penguin swimming in outer space</div>
+    </div>
+    <div class="video-wrapper">
+      <video preload="auto"class="hover-video" src="assets/results/rubber_duck/original.mp4" preload="metadata" autoplay loop muted> </video>
+      <video preload="auto"class="default-video" src="assets/results/rubber_duck/duck.mp4" preload="metadata" autoplay controls loop muted></video>
+      <div class="overlay-text">A duck swimming in a pond</div>
+    </div>
+    <div class="video-wrapper">
+      <video preload="auto"class="hover-video" src="assets/results/libby/original.mp4" preload="metadata" autoplay loop muted> </video>
+      <video preload="auto"class="default-video" src="assets/results/libby/horse.mp4" preload="metadata" autoplay controls loop muted></video>
+      <div class="overlay-text">A horse running near a fence</div>
+    </div>
+    <div class="video-wrapper">
+      <video preload="auto"class="hover-video" src="assets/results/libby/original.mp4" preload="metadata" autoplay loop muted> </video>
+      <video preload="auto"class="default-video" src="assets/results/libby/cat.mp4" preload="metadata" autoplay controls loop muted></video>
+      <div class="overlay-text">A cat running in the cosmos</div>
+    </div>
+    <div class="video-wrapper">
+      <video preload="auto"class="hover-video" src="assets/results/chick/original.mp4" preload="metadata" autoplay loop muted> </video>
+      <video preload="auto"class="default-video" src="assets/results/chick/goose.mp4" preload="metadata" autoplay controls loop muted></video>
+      <div class="overlay-text">A goose walking in a field</div>
+    </div>
+    <div class="video-wrapper">
+      <video preload="auto"class="hover-video" src="assets/results/chick/original.mp4" preload="metadata" autoplay loop muted> </video>
+      <video preload="auto"class="default-video" src="assets/results/chick/flamingo.mp4" preload="metadata" autoplay controls loop muted></video>
+      <div class="overlay-text">A flamingo walking in a field</div>
+    </div>
+    <div class="video-wrapper">
+      <video preload="auto"class="hover-video" src="assets/results/airplane/original.mp4" preload="metadata" autoplay loop muted> </video>
+      <video preload="auto"class="default-video" src="assets/results/airplane/car.mp4" preload="metadata" autoplay controls loop muted></video>
+      <div class="overlay-text">A car driving on a road</div>
+    </div>
+    <div class="video-wrapper">
+      <video preload="auto"class="hover-video" src="assets/results/airplane/original.mp4" preload="metadata" autoplay loop muted> </video>
+      <video preload="auto"class="default-video" src="assets/results/airplane/bus.mp4" preload="metadata" autoplay controls loop muted></video>
+      <div class="overlay-text">A bus driving on a road</div>
+    </div>
+    <div class="video-wrapper">
+      <video preload="auto"class="hover-video" src="assets/results/bear/original.mp4" preload="metadata" autoplay loop muted> </video>
+      <video preload="auto"class="default-video" src="assets/results/bear/camel.mp4" preload="metadata" autoplay controls loop muted></video>
+      <div class="overlay-text">A camel walking on icy rocks in antarctica</div>
+    </div>
+    <div class="video-wrapper">
+      <video preload="auto"class="hover-video" src="assets/results/bear/original.mp4" preload="metadata" autoplay loop muted> </video>
+      <video preload="auto"class="default-video" src="assets/results/bear/elephant.mp4" preload="metadata" autoplay controls loop muted></video>
+      <div class="overlay-text">An elephant walking on the rocks</div>
+    </div>
+
+</section>
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            We present a new method for text-driven motion transfer --
+            synthesizing a video that complies with an input text prompt describing the target objects and scene
+            while maintaining an input video's motion and scene layout. Prior methods are confined to transferring
+            motion across two subjects within the same or closely related object categories and are applicable
+            for limited domains (e.g., humans). In this work, we consider a significantly more challenging setting
+            in which the target and source objects differ drastically in shape
+            and fine-grained motion characteristics (e.g., translating a jumping dog into a dolphin).
+            To this end, we leverage a pre-trained and fixed text-to-video diffusion model,
+            which provides us with generative and motion priors.
+            The pillar of our method is a new space-time feature loss derived directly from the model.
+            This loss guides the generation process to preserve the overall motion of the input video
+            while complying with the target object in terms of shape and fine-grained motion traits.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<!-- Paper poster -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-">
+          <h2 class="title is-3">Method</h2>
+          <div class="content has-text-justified">
+        
+      <table width="800" border="0">
+        <tbody>
+          <tr>
+            <td colspan="3">
+              <p>
+                To reduce dependency on pixel-level information and enhance robustness to variations in appearance and shape,
+                we introduce a new feature descriptor termed "Spatial Marginal Mean (SMM)."
+                This descriptor is obtained by averaging the space-time features along the spatial dimensions.
+                Despite collapsing the spatial dimensions, the SMM features retain information about objects' pose and semantic layout,
+                showcasing robustness to appearance and shape variations.
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td style="font-size: 16px; text-align: center;">Original</td>
+            <td style="font-size: 16px; text-align: center;">Space-time feature loss</td>
+            <td style="font-size: 16px; text-align: center;">SMM feature loss</td>
+          </tr>
+          <tr class="video-row">
+            <td style="text-align: center;">
+              <a href="assets/analysis/original.mp4">
+                <video preload="auto"width="320" height="320" src="assets/analysis/original.mp4" autoplay loop controls muted/>
+              </a>
+            </td>
+            <td style="text-align: center;">
+              <a href="assets/analysis/seed_14/full.mp4">
+                <video preload="auto"width="320" height="320" src="assets/analysis/seed_14/full.mp4" autoplay loop controls muted/>
+              </a>
+            </td>
+            <td style="text-align: center;">
+              <a href="assets/analysis/seed_14/avg.mp4">
+                <video preload="auto"width="320" height="320" src="assets/analysis/seed_14/avg.mp4" autoplay loop controls muted/>
+              </a>
+            </td>
+          </tr>
+          <tr class="video-row">
+            <td style="text-align: center;">
+              <a href="assets/analysis/original.mp4">
+                <video preload="auto"width="320" height="320" src="assets/analysis/original.mp4" autoplay loop controls muted/>
+              </a>
+            </td>
+            <td style="text-align: center;">
+              <a href="assets/analysis/seed_14/full.mp4">
+                <video preload="auto"width="320" height="320" src="assets/analysis/seed_15/full.mp4" autoplay loop controls muted/>
+              </a>
+            </td>
+            <td style="text-align: center;">
+              <a href="assets/analysis/seed_15/avg.mp4">
+                <video preload="auto"width="320" height="320" src="assets/analysis/seed_15/avg.mp4" autoplay loop controls muted/>
+              </a>
+            </td>
+          </tr>
+          <tr>
+            
+            <td colspan="3">
+              <p style="margin-top: 20px; margin-bottom: -12px;">
+                Our key finding is
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+        <div>
+          <td colspan="3"><img src="assets/pics/pipeline.jpg" alt="" width="1000" /></td>
+        </div>
+      
+      </div>
+      </div>
+  </section>
+<!--End paper poster -->
+
+<!-- video preload="auto"carousel -->
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column custom-width">
+          <h2 class="title is-3">Comparisons</h2>
+          <p>Please see our <a href="./sm/supp.html"><strong>Supplementary Materials</strong></a> for more comparisons.</p>
+          <div class="content has-text-justified">
+            <div class="caption-container" style="width: 1200px; padding-left: 50px">
+              <div class="caption">
+                <p>Input video</p>
+              </div>
+              <div class="caption">
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ours</p>
+              </div>
+              <div class="caption">
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Text-to-video <a href="#ref-txt2vid">[1]</a></p>
+              </div>
+              <div class="caption">
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;Tune-a-video <a href="#ref-TAV">[2]</a></p>
+              </div>
+              <div class="caption">
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gen-1 <a href="#ref-gen1">[3]</a></p>
+              </div>
+              <div class="caption">
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Per frame PnP<a href="#ref-pnp">[4]</a></p>
+              </div>
+              <div class="caption">
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fate-Zero<a href="#ref-fatezero">[5]</a></p>
+              </div>
+              <div class="caption">
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rerender-a-video<a href="#ref-rerender">[6]</a></p>
+              </div>
+              
+              <!-- Add remaining captions here  -->
+            </div>
+      <div id="results-carousel" class="carousel results-carousel" align="center">
+        <div class="item item-video1">
+           <!-- Add caption element for each video preload="auto"-->
+          <video preload="auto"poster="" id="video11" autoplay controls muted loop width="140px">
+            <!-- Your video preload="auto"file here -->
+            <source src="./sm/assets/bread/input_fps20.mp4"
+            type="video/mp4">
+          </video>
+          <video preload="auto"poster="" id="video12" autoplay controls muted loop width="140px">
+            <!-- Your video preload="auto"file here -->
+            <source src="./sm/assets/bread/a shiny metal scultpture/result_fps_20.mp4"
+            type="video/mp4">
+          </video>
+          
+          <video preload="auto"poster="" id="video13" autoplay controls muted loop width="140px">
+            <!-- Your video preload="auto"file here -->
+            <source src="./sm/assets/bread/a shiny metal scultpture/txt2vid_fps20.mp4"
+            type="video/mp4">
+          </video>
+          
+          <video preload="auto"poster="" id="video14" autoplay controls muted loop width="140px">
+            <!-- Your video preload="auto"file here -->
+            <source src="./sm/assets/bread/a shiny metal scultpture/tav_fps20.mp4"
+            type="video/mp4">
+          </video>
+          
+          <video preload="auto"poster="" id="video15" autoplay controls muted loop width="140px">
+            <!-- Your video preload="auto"file here -->
+            <source src="./sm/assets/bread/a shiny metal scultpture/gen1_fps20.mp4"
+            type="video/mp4">
+          </video>
+          
+          <video preload="auto"poster="" id="video16" autoplay controls muted loop width="140px">
+            <!-- Your video preload="auto"file here -->
+            <source src="./sm/assets/bread/a shiny metal scultpture/pnp_per_frame_baseline_fps_20.mp4"
+            type="video/mp4">
+          </video>
+          <video preload="auto"poster="" id="video25" autoplay controls muted loop width="140px">
+            <!-- Your video preload="auto"file here -->
+            <source src="./sm/assets/bread/a shiny metal scultpture/fatezero_20_fps.mp4"
+            type="video/mp4">
+          </video>
+          <video preload="auto"poster="" id="video25" autoplay controls muted loop width="140px">
+            <!-- Your video preload="auto"file here -->
+            <source src="./sm/assets/bread/a shiny metal scultpture/rerender_fps_20.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        
+        <div class="item item-video2">
+          
+          <video preload="auto"poster="" id="video1" autoplay controls muted loop width="140px">
+            <!-- Your video preload="auto"file here -->
+            <source src="./sm/assets/poodle/input_fps30.mp4"
+            type="video/mp4">
+          </video>
+          
+          <video preload="auto"poster="" id="video21" autoplay controls muted loop width="140px">
+            <!-- Your video preload="auto"file here -->
+            <source src="./sm/assets/poodle/a dog with a rainbow texture/result_fps_30.mp4"
+            type="video/mp4">
+          </video>
+          
+          <video preload="auto"poster="" id="video22" autoplay controls muted loop width="140px">
+            <!-- Your video preload="auto"file here -->
+            <source src="./sm/assets/poodle/a dog with a rainbow texture/txt2vid_fps30.mp4"
+            type="video/mp4">
+          </video>
+          
+          <video preload="auto"poster="" id="video23" autoplay controls muted loop width="140px">
+            <!-- Your video preload="auto"file here -->
+            <source src="./sm/assets/poodle/a dog with a rainbow texture/tav_fps30.mp4"
+            type="video/mp4">
+          </video>
+          
+          <video preload="auto"poster="" id="video24" autoplay controls muted loop width="140px">
+            <!-- Your video preload="auto"file here -->
+            <source src="./sm/assets/poodle/a dog with a rainbow texture/gen1_fps30.mp4"
+            type="video/mp4">
+          </video>
+          
+          <video preload="auto"poster="" id="video25" autoplay controls muted loop width="140px">
+            <!-- Your video preload="auto"file here -->
+            <source src="./sm/assets/poodle/a dog with a rainbow texture/pnp_per_frame_baseline_fps_30.mp4"
+            type="video/mp4">
+          </video>
+          <video preload="auto"poster="" id="video25" autoplay controls muted loop width="140px">
+            <!-- Your video preload="auto"file here -->
+            <source src="./sm/assets/poodle/a dog with a rainbow texture/fatezero_30_fps.mp4"
+            type="video/mp4">
+          </video>
+          <video preload="auto"poster="" id="video25" autoplay controls muted loop width="140px">
+            <!-- Your video preload="auto"file here -->
+            <source src="./sm/assets/poodle/a dog with a rainbow texture/rerender_fps_30.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End video preload="auto"carousel -->
+
+<!--BibTex citation -->
+
+<!--End BibTex citation -->
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column custom-width">
+          <!-- <h2 class="title is-3"></h2> -->
+          <div class="content has-text-justified">
+  <p>
+    <a name="ref-tokenflow" id="ref-tokenflow"></a>
+    [1] Michal Geyer, Omer Bar-Tal, Shai Bagon, and Tali Dekel.
+    Tokenflow: Consistent diffusion features for consistent video editing.
+    arXiv preprint arxiv:2307.10373, 2023.
+  </p>
+    <a name="ref-gen1" id="ref-gen1"></a>
+    [2] Patrick Esser, Johnathan Chiu, Parmida Atighehchian,
+    Jonathan Granskog, and Anastasis Germanidis. Structure
+    and content-guided video synthesis with diffusion models.
+    arXiv preprint arXiv:2302.03011, 2023
+  </p>
+  <p>
+    <p>
+      <a name="ref-Tune-A-Video" id="ref-Tune-A-Video"></a>
+      [3] Jay Zhangjie Wu, Yixiao Ge, Xintao Wang, Stan Weixian
+       Lei, Yuchao Gu, Wynne Hsu, Ying Shan, Xiaohu Qie, and
+       Mike Zheng Shou. Tune-a-video: One-shot tuning of image
+       diffusion models for text-to-video generation. arXiv preprint
+       arXiv:2212.11565, 2022.
+    </p>
+  <p>
+    <p>
+      <a name="ref-Control-A-Video" id="ref-Control-A-Video"></a>
+      [4] Weifeng Chen, Jie Wu, Pan Xie, Hefeng Wu, Jiashi Li,
+      Xin Xia, Xuefeng Xiao, and Liang Lin. Control-a-video:
+      Controllable text-to-video generation with diffusion models,
+      2023.
+    </p>
+      <p>
+        <p>
+          <a name="ref-SA-NLA" id="ref-SA-NLA"></a>
+          [5] Yao-Chih Lee, Ji-Ze Genevieve Jang, Yi-Ting Chen, Elizabeth Qiu,
+           and Jia-Bin Huang. Shape-aware text-driven layered video editing. arXiv preprint arXiv:2301.13173, 2023.
+
+        </p>
+      <p>
+       <p>
+          <a name="ref-SDEDIT" id="ref-SDEDIT"></a>
+          [6] Chenlin Meng, Yutong He, Yang Song, Jiaming Song, Jia
+           jun Wu, Jun-Yan Zhu, and Stefano Ermon. SDEdit: Guided
+           image synthesis and editing with stochastic differential
+           equations. In International Conference on Learning
+           Representations, 2022
+
+        </p>
+  </div>
+        </div>
+      </div>
+    </div>  
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        const videoWrappers = document.querySelectorAll('.video-wrapper');
+      
+        videoWrappers.forEach(wrapper => {
+          const defaultVideo = wrapper.querySelector('.default-video');
+          const aspectRatio = defaultVideo.videoWidth / defaultVideo.videoHeight;
+          const height = wrapper.offsetWidth / aspectRatio;
+      
+          wrapper.style.height = `${height}px`;
+      
+          wrapper.addEventListener('mouseenter', () => {
+            defaultVideo.pause();
+            hoverVideo.play();
+          });
+      
+          wrapper.addEventListener('mouseleave', () => {
+            defaultVideo.play();
+            hoverVideo.pause();
+          });
+        });
+      }); 
+      $(document).ready(function() {
+        var carouselItems = $('.carousel .item');
+        var numItems = carouselItems.length;
+        var numVideos = 5;
+        var currentIndex = 0;
+    
+        $('.carousel').on('click', function() {
+          currentIndex++;
+          if (currentIndex + numVideos <= numItems) {
+            carouselItems.removeClass('active');
+            carouselItems.slice(currentIndex, currentIndex + numVideos).addClass('active');
+          } else {
+            currentIndex = 0;
+            carouselItems.removeClass('active');
+            carouselItems.slice(currentIndex, currentIndex + numVideos).addClass('active');
+          }
+        });
+    
+        carouselItems.slice(currentIndex, currentIndex + numVideos).addClass('active');
+      });
+    </script>
+  </body>
+  </html>
