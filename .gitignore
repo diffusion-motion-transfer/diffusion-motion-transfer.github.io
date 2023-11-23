@@ -1,1 +1,3 @@
 *.xml
+#all files from .idea folder
+.idea/*
