@@ -30,7 +30,7 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-<!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css" integrity="sha384-BY+fdrpOd3gfeRvTSMT+VUZmA728cfF9Z2G42xpaRkUGu2i3DyzpTURDo5A6CaLK" crossorigin="anonymous">-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.css">
     <link rel="stylesheet" href="static/css/index.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
@@ -65,7 +65,7 @@
                     <div class="is-size-5 publication-authors">
                         <!-- Paper authors -->
                         <span class="author-block">
-                        <a href="https://michalgeyer.my.canva.site/" target="_blank">Danah Yatim</a><sup>*</sup>,</span>
+                        <a href="https://www.linkedin.com/in/danah-alyce-yatim-4b15231b5/" target="_blank">Danah Yatim</a><sup>*</sup>,</span>
                         <span class="author-block">
                         <a href="https://www.linkedin.com/in/rafail-fridman/" target="_blank">Rafail Fridman</a><sup>*</sup>,</span>
                           <span class="author-block">
@@ -93,17 +93,37 @@
                                   <i class="fas fa-file-pdf"></i>
                                 </span>
                                 <span>Paper</span>
-                              </a>
-                            </span>
+                                  </a>
+                                </span>
 
-                    <!-- Supplementary PDF link -->
-                    <span class="link-block">
-                      <a href="sm/index.html" target="_blank"
-                         class="external-link button is-normal is-rounded is-dark">
-                      <span>Supplementary Material</span>
-                    </a>
-                  </span>
-                </div>
+                                <span class="link-block">
+                                <a href="https://arxiv.org/abs/2307.10373" class="external-link button is-normal is-rounded is-dark">
+                                <span class="icon">
+                                  <i class="ai ai-arxiv"></i>
+                                </span>
+                                <span>Arxiv</span>
+                                  </a>
+                                </span>
+
+                                <span class="link-block">
+                                <a class="external-link button is-normal is-rounded is-dark">
+                                <span class="icon">
+                                  <i class="fa-brands fa-github"></i>
+                                </span>
+                                <span>Code (coming soon)</span>
+                                  </a>
+                                </span>
+
+                                <!-- Supplementary PDF link -->
+                                <span class="link-block">
+                                  <a href="sm/index.html" target="_blank"
+                                     class="external-link button is-normal is-rounded is-dark">
+                                  <span>Supplementary Material</span>
+                                </a>
+                              </span>
+                            </div>
+                        </div>
+                    </div>
             </div>
         </div>
     </div>
@@ -114,320 +134,207 @@
 
 <!--<div w3-include-html="carousel.html"></div>-->
 
+
+
 <div class="container" style="width: 60%">
     <div id="slick">
-        <div class="slide">
-            <div class="card">
-                <video class="img-fluid" autoplay loop muted playsinline>
-                    <source src="vertical_videos/dog_A_dragon_sitting_in_a_floral_forest_seed_3197.mp4"
-                            type="video/mp4">
-                </video>
-                <div class="card-body">
-                    <p class="prompt" style="font-family: Chalkduster,serif;">
-                        A dragon sitting in a floral forest
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="slide">
-            <div class="card">
-                <video class="img-fluid" autoplay loop muted playsinline>
-                    <source src="vertical_videos/dog_A_lion_sitting_in_a_snowy_forest_seed_6933.mp4" type="video/mp4">
-                </video>
-                <div class="card-body">
-                    <p class="prompt" style="font-family: Chalkduster,serif;">
-                        A lion sitting in a snowy forest
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="slide">
-            <div class="card">
-                <video class="img-fluid" autoplay loop muted playsinline>
-                    <source src="vertical_videos/dog_jump_A_dolphin_jumping_into_the_ocean_seed_2385.mp4"
-                            type="video/mp4">
-                </video>
-                <div class="card-body">
-                    <p class="prompt" style="font-family: Chalkduster,serif;">
-                        A dolphin jumping into the ocean
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="slide">
-            <div class="card">
-                <video class="img-fluid" autoplay loop muted playsinline>
-                    <source src="vertical_videos/dog_jump_A_horse_jumping_into_a_river_in_the_suns_seed_5380.mp4"
-                            type="video/mp4">
-                </video>
-                <div class="card-body">
-                    <p class="prompt" style="font-family: Chalkduster,serif;">
-                        A horse jumping into a river
-                    </p>
-                </div>
-            </div>
-        </div>
 
+<div class="slide">
+    <div class="card">
+        <video class="img-fluid" autoplay loop muted playsinline>
+            <source src="sm/assets/results_concatenated/dog_lion_dragon.mp4" type="video/mp4">
+        </video>
+        <div class="card-body">
+            <table style="width:100%">
+              <tr>
+                <td style="text-align: center; font-family: Chalkduster,serif;width: 50%">A lion sitting in a forest</td>
+                <td style="text-align: center; font-family: Chalkduster,serif;width: 50%">A dragon sitting in a floral forest</td>
+              </tr>
+            </table>
+        </div>
+    </div>
+</div>
 
-        <div class="slide">
-            <div class="card">
-                <video class="img-fluid" autoplay loop muted playsinline>
-                    <source src="vertical_videos/car-turn_A_bike_driving_on_a_snow_covered_road,_i_seed_5554.mp4"
-                            type="video/mp4">
-                </video>
-                <div class="card-body">
-                    <p class="prompt" style="font-family: Chalkduster,serif;">
-                        A bike driving in a snowy forest
-                    </p>
-                </div>
-            </div>
+<div class="slide">
+    <div class="card">
+        <video class="img-fluid" autoplay loop muted playsinline>
+            <source src="sm/assets/results_concatenated/car-turn_bike_train.mp4" type="video/mp4">
+        </video>
+        <div class="card-body">
+            <table style="width:100%">
+              <tr>
+                <td style="text-align: center; font-family: Chalkduster,serif;width: 50%">A bike driving in a snowy forest</td>
+                <td style="text-align: center; font-family: Chalkduster,serif;width: 50%">A train riding on rails in autumn view</td>
+              </tr>
+            </table>
         </div>
-        <div class="slide">
-            <div class="card">
-                <video class="img-fluid" autoplay loop muted playsinline>
-                    <source src="vertical_videos/car-turn_A_train_riding_on_rails,_with_autumn_vie_seed_92.mp4"
-                            type="video/mp4">
-                </video>
-                <div class="card-body">
-                    <p class="prompt" style="font-family: Chalkduster,serif;">
-                        A train riding on rails in autumn view </p>
-                </div>
-            </div>
-        </div>
+    </div>
+</div>
 
+<div class="slide">
+    <div class="card">
+        <video class="img-fluid" autoplay loop muted playsinline>
+            <source src="sm/assets/results_concatenated/dog_jump_horse_dolphin.mp4" type="video/mp4">
+        </video>
+        <div class="card-body">
+            <table style="width:100%">
+              <tr>
+                <td style="text-align: center; font-family: Chalkduster,serif;width: 50%">A horse jumping into a river</td>
+                <td style="text-align: center; font-family: Chalkduster,serif;width: 50%">A dolphin jumping into the ocean</td>
+              </tr>
+            </table>
+        </div>
+    </div>
+</div>
 
-        <div class="slide">
-            <div class="card">
-                <video class="img-fluid" autoplay loop muted playsinline>
-                    <source src="vertical_videos/cute_kittens_Two_monkeys_playing_with_a_coconut_in_th_seed_7046.mp4"
-                            type="video/mp4">
-                </video>
-                <div class="card-body">
-                    <p class="prompt" style="font-family: Chalkduster,serif;">
-                        Monkeys playing with coconuts
-                    </p>
-                </div>
-            </div>
+<div class="slide">
+    <div class="card">
+        <video class="img-fluid" autoplay loop muted playsinline>
+            <source src="sm/assets/results_concatenated/elephant_camel_giraffe.mp4" type="video/mp4">
+        </video>
+        <div class="card-body">
+            <table style="width:100%">
+              <tr>
+                <td style="text-align: center; font-family: Chalkduster,serif;width: 50%">A camel crossing a road in a savannah</td>
+                <td style="text-align: center; font-family: Chalkduster,serif;width: 50%">A giraffe crossing a road in a savannah</td>
+              </tr>
+            </table>
         </div>
-        <div class="slide">
-            <div class="card">
-                <video class="img-fluid" autoplay loop muted playsinline>
-                    <source src="vertical_videos/cute_kittens_Two_rabbits_playing_with_an_easter_egg_i_seed_4706.mp4"
-                            type="video/mp4">
-                </video>
-                <div class="card-body">
-                    <p class="prompt" style="font-family: Chalkduster,serif;">
-                        Rabbits playing with easter eggs
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="slide">
-            <div class="card">
-                <video class="img-fluid" autoplay loop muted playsinline>
-                    <source src="vertical_videos/elephant_A_camel_crossing_a_road_in_a_savannah_seed_9064.mp4"
-                            type="video/mp4">
-                </video>
-                <div class="card-body">
-                    <p class="prompt" style="font-family: Chalkduster,serif;">
-                        A camel crossing a road in a savannah
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="slide">
-            <div class="card">
-                <video class="img-fluid" autoplay loop muted playsinline>
-                    <source src="vertical_videos/elephant_A_giraffe_crossing_a_road_in_a_savannah_seed_5815.mp4"
-                            type="video/mp4">
-                </video>
-                <div class="card-body">
-                    <p class="prompt" style="font-family: Chalkduster,serif;">
-                        A giraffe crossing a road in a savannah
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="slide">
-            <div class="card">
-                <video class="img-fluid" autoplay loop muted playsinline>
-                    <source src="vertical_videos/frisbee_dog_A_bear_catching_a_frisbee_in_the_field_seed_2599.mp4"
-                            type="video/mp4">
-                </video>
-                <div class="card-body">
-                    <p class="prompt" style="font-family: Chalkduster,serif;">
-                        A bear catching a frisbee in the field
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="slide">
-            <div class="card">
-                <video class="img-fluid" autoplay loop muted playsinline>
-                    <source src="vertical_videos/frisbee_dog_A_cat_catching_a_frisbee_in_the_field_seed_828.mp4"
-                            type="video/mp4">
-                </video>
-                <div class="card-body">
-                    <p class="prompt" style="font-family: Chalkduster,serif;">
-                        A cat catching a frisbee in the field
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="slide">
-            <div class="card">
-                <video class="img-fluid" autoplay loop muted playsinline>
-                    <source src="vertical_videos/locomotive_An_airplane_driving_in_a_forest_seed_2433.mp4"
-                            type="video/mp4">
-                </video>
-                <div class="card-body">
-                    <p class="prompt" style="font-family: Chalkduster,serif;">
-                        An airplane driving in a forest
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="slide">
-            <div class="card">
-                <video class="img-fluid" autoplay loop muted playsinline>
-                    <source src="vertical_videos/locomotive_An_motorbike_driving_in_a_forest_seed_15.mp4"
-                            type="video/mp4">
-                </video>
-                <div class="card-body">
-                    <p class="prompt" style="font-family: Chalkduster,serif;">
-                        An motorbike driving in a forest
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="slide">
-            <div class="card">
-                <video class="img-fluid" autoplay loop muted playsinline>
-                    <source src="vertical_videos/rubber_duck_A_penguin_swimming_in_outer_space,_surro_seed_8297.mp4"
-                            type="video/mp4">
-                </video>
-                <div class="card-body">
-                    <p class="prompt" style="font-family: Chalkduster,serif;">
-                        A penguin swimming in outer space
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="slide">
-            <div class="card">
-                <video class="img-fluid" autoplay loop muted playsinline>
-                    <source src="vertical_videos/rubber_duck_A_duck_swimming_in_a_pond_seed_8296.mp4" type="video/mp4">
-                </video>
-                <div class="card-body">
-                    <p class="prompt" style="font-family: Chalkduster,serif;">
-                        A duck swimming in a pond
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="slide">
-            <div class="card">
-                <video class="img-fluid" autoplay loop muted playsinline>
-                    <source src="vertical_videos/libby_A_cat_running_in_the_cosmos,_surrounded__seed_46.mp4"
-                            type="video/mp4">
-                </video>
-                <div class="card-body">
-                    <p class="prompt" style="font-family: Chalkduster,serif;">
-                        A cat running in the cosmos
-                    </p>
-                </div>
-            </div>
-        </div>
+    </div>
+</div>
 
-        <div class="slide">
-            <div class="card">
-                <video class="img-fluid" autoplay loop muted playsinline>
-                    <source src="vertical_videos/libby_A_horse_running_near_a_fence_seed_1484.mp4" type="video/mp4">
-                </video>
-                <div class="card-body">
-                    <p class="prompt" style="font-family: Chalkduster,serif;">
-                        A horse running near a fence
-                    </p>
-                </div>
-            </div>
+<div class="slide">
+    <div class="card">
+        <video class="img-fluid" autoplay loop muted playsinline>
+            <source src="sm/assets/results_concatenated/cute_kittens_monkeys_rabbits.mp4" type="video/mp4">
+        </video>
+        <div class="card-body">
+            <table style="width:100%">
+              <tr>
+                <td style="text-align: center; font-family: Chalkduster,serif;width: 50%">Monkeys playing with coconuts</td>
+                <td style="text-align: center; font-family: Chalkduster,serif;width: 50%">Rabbits playing with easter eggs</td>
+              </tr>
+            </table>
         </div>
-        <div class="slide">
-            <div class="card">
-                <video class="img-fluid" autoplay loop muted playsinline>
-                    <source src="vertical_videos/chick_A_flamingo_walking_in_a_field_seed_2936.mp4" type="video/mp4">
-                </video>
-                <div class="card-body">
-                    <p class="prompt" style="font-family: Chalkduster,serif;">
-                        A flamingo walking in a field
-                    </p>
-                </div>
-            </div>
-        </div>
+    </div>
+</div>
 
-        <div class="slide">
-            <div class="card">
-                <video class="img-fluid" autoplay loop muted playsinline>
-                    <source src="vertical_videos/chick_A_goose_walking_in_a_field_seed_2942.mp4" type="video/mp4">
-                </video>
-                <div class="card-body">
-                    <p class="prompt" style="font-family: Chalkduster,serif;">
-                        A goose walking in a field
-                    </p>
-                </div>
-            </div>
+<div class="slide">
+    <div class="card">
+        <video class="img-fluid" autoplay loop muted playsinline>
+            <source src="sm/assets/results_concatenated/locomotive_airplane_motorbike.mp4" type="video/mp4">
+        </video>
+        <div class="card-body">
+            <table style="width:100%">
+              <tr>
+                <td style="text-align: center; font-family: Chalkduster,serif;width: 50%">An airplane driving in a forest</td>
+                <td style="text-align: center; font-family: Chalkduster,serif;width: 50%">A motorbike driving in a forest</td>
+              </tr>
+            </table>
         </div>
-        <div class="slide">
-            <div class="card">
-                <video class="img-fluid" autoplay loop muted playsinline>
-                    <source src="vertical_videos/airplane_A_car_driving_on_a_road_seed_3682.mp4" type="video/mp4">
-                </video>
-                <div class="card-body">
-                    <p class="prompt" style="font-family: Chalkduster,serif;">
-                        A car driving on a road
-                    </p>
-                </div>
-            </div>
+    </div>
+</div>
+
+<div class="slide">
+    <div class="card">
+        <video class="img-fluid" autoplay loop muted playsinline>
+            <source src="sm/assets/results_concatenated/rubber_duck_duck_penguin.mp4" type="video/mp4">
+        </video>
+        <div class="card-body">
+            <table style="width:100%">
+              <tr>
+                <td style="text-align: center; font-family: Chalkduster,serif;width: 50%">A duck swimming in a pond</td>
+                <td style="text-align: center; font-family: Chalkduster,serif;width: 50%">A penguin swimming in outer space</td>
+              </tr>
+            </table>
         </div>
-        <div class="slide">
-            <div class="card">
-                <video class="img-fluid" autoplay loop muted playsinline>
-                    <source src="vertical_videos/airplane_A_bus_driving_on_a_road_seed_9861.mp4" type="video/mp4">
-                </video>
-                <div class="card-body">
-                    <p class="prompt" style="font-family: Chalkduster,serif;">
-                        A bus driving on a road
-                    </p>
-                </div>
-            </div>
+    </div>
+</div>
+
+<div class="slide">
+    <div class="card">
+        <video class="img-fluid" autoplay loop muted playsinline>
+            <source src="sm/assets/results_concatenated/chick_flamingo_goose.mp4" type="video/mp4">
+        </video>
+        <div class="card-body">
+            <table style="width:100%">
+              <tr>
+                <td style="text-align: center; font-family: Chalkduster,serif;width: 50%">A flamingo walking in a field</td>
+                <td style="text-align: center; font-family: Chalkduster,serif;width: 50%">A goose walking in a field</td>
+              </tr>
+            </table>
         </div>
-        <div class="slide">
-            <div class="card">
-                <video class="img-fluid" autoplay loop muted playsinline>
-                    <source src="vertical_videos/bear_A_camel_walking_on_icy_rocks_in_antarcti_seed_975.mp4"
-                            type="video/mp4">
-                </video>
-                <div class="card-body">
-                    <p class="prompt" style="font-family: Chalkduster,serif;">
-                        A camel walking on icy rocks in antarctica
-                    </p>
-                </div>
-            </div>
+    </div>
+</div>
+
+<div class="slide">
+    <div class="card">
+        <video class="img-fluid" autoplay loop muted playsinline>
+            <source src="sm/assets/results_concatenated/frisbee_dog_bear_cat.mp4" type="video/mp4">
+        </video>
+        <div class="card-body">
+            <table style="width:100%">
+              <tr>
+                <td style="text-align: center; font-family: Chalkduster,serif;width: 50%">A bear catching a frisbee in the field</td>
+                <td style="text-align: center; font-family: Chalkduster,serif;width: 50%">A cat catching a frisbee in the field</td>
+              </tr>
+            </table>
         </div>
-        <div class="slide">
-            <div class="card">
-                <video class="img-fluid" autoplay loop muted playsinline>
-                    <source src="vertical_videos/bear_An_elephant_walking_on_the_rocks_seed_8490.mp4" type="video/mp4">
-                </video>
-                <div class="card-body">
-                    <p class="prompt" style="font-family: Chalkduster,serif;">
-                        An elephant walking on the rocks
-                    </p>
-                </div>
-            </div>
+    </div>
+</div>
+
+<div class="slide">
+    <div class="card">
+        <video class="img-fluid" autoplay loop muted playsinline>
+            <source src="sm/assets/results_concatenated/libby_cat_horse.mp4" type="video/mp4">
+        </video>
+        <div class="card-body">
+            <table style="width:100%">
+              <tr>
+                <td style="text-align: center; font-family: Chalkduster,serif;width: 50%">A cat running in the cosmos</td>
+                <td style="text-align: center; font-family: Chalkduster,serif;width: 50%">A horse running near a fence</td>
+              </tr>
+            </table>
         </div>
+    </div>
+</div>
+
+<div class="slide">
+    <div class="card">
+        <video class="img-fluid" autoplay loop muted playsinline>
+            <source src="sm/assets/results_concatenated/bear_camel_elephant.mp4" type="video/mp4">
+        </video>
+        <div class="card-body">
+            <table style="width:100%">
+              <tr>
+                <td style="text-align: center; font-family: Chalkduster,serif;width: 50%">A camel walking on icy rocks in antarctica</td>
+                <td style="text-align: center; font-family: Chalkduster,serif;width: 50%">An elephant walking on the rocks</td>
+              </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="slide">
+    <div class="card">
+        <video class="img-fluid" autoplay loop muted playsinline>
+            <source src="sm/assets/results_concatenated/airplane_car_bus.mp4" type="video/mp4">
+        </video>
+        <div class="card-body">
+            <table style="width:100%">
+              <tr>
+                <td style="text-align: center; font-family: Chalkduster,serif;width: 50%">A car driving on a road</td>
+                <td style="text-align: center; font-family: Chalkduster,serif;width: 50%">A bus driving on a road</td>
+              </tr>
+            </table>
+        </div>
+    </div>
+</div>
 
     </div>
 </div>
+
+
 
 <!-- Paper abstract -->
 <section class="section hero is-light">
@@ -568,7 +475,7 @@
         <div class="container is-max-desktop">
             <div class="columns is-centered has-text-centered">
                 <div class="column is-">
-                    <h2 class="title is-3">Motion-Fidelity Evaluation</h2>
+                    <h2 class="title is-3">Measuring Motion Fidelity</h2>
                     <div class="content has-text-justified">
                       We aim to assess the fidelity of our results in preserving the original motion. Given our task
                         involves structural deviations, there is no alignment between pixels in the original and output videos.
@@ -576,10 +483,10 @@
                         We thus introduce a new metric, based on similarity between unaligned long-trajectories. For two sets of
                         trajectories $\mathcal{T}$ and $\tilde{\mathcal{T}}$ extracted from the original and output videos, respectively, the metric is defined as:
                         $$\frac{1}{m}\sum_{\tilde{\tau}\in \tilde{\mathcal{T}}} \underset{\tau \in \mathcal{T} }{\text{max}} \ \textbf{corr} (\tau,\tilde{\tau})+\frac{1}{n}\sum_{{\tau}\in {\mathcal{T}}} \underset{\tilde{\tau} \in \tilde{\mathcal{T}} }{\text{max}} \ \textbf{corr} (\tau,\tilde{\tau})$$
-                        where the correlation between two tracklets $\textbf{corr}(\tau,\tilde{\tau})$ is computed as follows, similarly to CITE:
+                        where the correlation between two tracklets $\textbf{corr}(\tau,\tilde{\tau})$ is computed as follows, similarly to <a href="#ref-motion">[1]</a>:
                         $$\textbf{corr}(\tau,\tilde{\tau}) =  \dfrac{1}{F}\sum_{k=1}^F\dfrac{{v_k^x \cdot \tilde{v}_k^x + v_k^y \cdot \tilde{v}_k^y}}{{\sqrt{(v_k^x)^2 + (v_k^y)^2} \cdot \sqrt{(\tilde{v}_k^x)^2 + (\tilde{v}_k^y)^2}}}$$
 
-                        Our method outperforms the baselines by achieving both high fidelity to the target text prompt (CLIP text similarity score) and the original motion (Motion-Fidelity Score).
+                        Our method outperforms the baselines by achieving both high fidelity to the target text prompt (CLIP text similarity score) and the original motion (Motion-Fidelity score).
                         <br>
                         <br>
 
@@ -594,196 +501,6 @@
     </div>
 </section>
 
-<!-- OVERLAY VIDEOS -->
-
-<section class="hero is-light">
-    <div class="hero-body">
-        <div class="container is-max-desktop">
-            <div class="columns is-centered has-text-centered">
-                <div class="column">
-                    <h2 class="title is-3">Motion Transfer Results</h2>
-                    <div class="content has-text-justified">
-                            <p style="margin-top: -12px;">
-                                Hover over the videos to see the original video and text prompts. Please see our
-                                <a style="color: blue" href="./sm/supp.html">Supplementary Materials</a> for more results.
-                            </p>
-                        <div class="video-wrapper">
-                            <video preload="auto" class="hover-video" src="sm/assets/results/dog/original.mp4"
-                                   preload="metadata" autoplay loop muted></video>
-                            <video preload="auto" class="default-video" src="sm/assets/results/dog/lion.mp4"
-                                   preload="metadata" autoplay controls loop muted></video>
-                            <div class="overlay-text">A lion sitting in a forest</div>
-                        </div>
-                        <div class="video-wrapper">
-                            <video preload="auto" class="hover-video" src="sm/assets/results/dog/original.mp4"
-                                   preload="metadata" autoplay loop muted></video>
-                            <video preload="auto" class="default-video" src="sm/assets/results/dog/dragon.mp4"
-                                   preload="metadata" autoplay controls loop muted></video>
-                            <div class="overlay-text">A dragon sitting in a floral forest</div>
-                        </div>
-                        <div class="video-wrapper">
-                            <video preload="auto" class="hover-video" src="sm/assets/results/car-turn/original.mp4"
-                                   preload="metadata" autoplay loop muted></video>
-                            <video preload="auto" class="default-video" src="sm/assets/results/car-turn/bike.mp4"
-                                   preload="metadata" autoplay controls loop muted></video>
-                            <div class="overlay-text">A bike driving in a snowy forest</div>
-                        </div>
-                        <div class="video-wrapper">
-                            <video preload="auto" class="hover-video" src="sm/assets/results/car-turn/original.mp4"
-                                   preload="metadata" autoplay loop muted></video>
-                            <video preload="auto" class="default-video" src="sm/assets/results/car-turn/train.mp4"
-                                   preload="metadata" autoplay controls loop muted></video>
-                            <div class="overlay-text">A train riding on rails in autumn view</div>
-                        </div>
-<!--                        <div class="video-wrapper">-->
-<!--                            <video preload="auto" class="default-video" src="sm/assets/results/dog_jump/horse.mp4"-->
-<!--                                   preload="metadata" autoplay loop muted></video>-->
-<!--                            <video preload="auto" class="hover-video" src="sm/assets/results/dog_jump/original.mp4"-->
-<!--                                   preload="metadata" autoplay controls loop muted></video>-->
-<!--                            <div class="overlay-text">A horse jumping into a river</div>-->
-<!--                        </div>-->
-<!--                        <div class="video-wrapper">-->
-<!--                            <video preload="auto" class="default-video" src="sm/assets/results/dog_jump/dolphin.mp4"-->
-<!--                                   preload="metadata" autoplay loop muted></video>-->
-<!--                            <video preload="auto" class="hover-video" src="sm/assets/results/dog_jump/original.mp4"-->
-<!--                                   preload="metadata" autoplay controls loop muted></video>-->
-<!--                            <div class="overlay-text">A dolphin jumping into the ocean</div>-->
-<!--                        </div>-->
-<!--                        <div class="video-wrapper">-->
-<!--                            <video preload="auto" class="hover-video" src="sm/assets/results/cute_kittens/original.mp4"-->
-<!--                                   preload="metadata" autoplay loop muted></video>-->
-<!--                            <video preload="auto" class="default-video" src="sm/assets/results/cute_kittens/monkeys.mp4"-->
-<!--                                   preload="metadata" autoplay controls loop muted></video>-->
-<!--                            <div class="overlay-text">Monkeys playing with coconuts</div>-->
-<!--                        </div>-->
-<!--                        <div class="video-wrapper">-->
-<!--                            <video preload="auto" class="default-video" src="sm/assets/results/cute_kittens/rabbits.mp4"-->
-<!--                                   preload="metadata" autoplay loop muted></video>-->
-<!--                            <video preload="auto" class="hover-video" src="sm/assets/results/cute_kittens/original.mp4"-->
-<!--                                   preload="metadata" autoplay controls loop muted></video>-->
-<!--                            <div class="overlay-text">Rabbits playing with easter eggs</div>-->
-<!--                        </div>-->
-<!--                        <div class="video-wrapper">-->
-<!--                            <video preload="auto" class="hover-video" src="sm/assets/results/elephant/original.mp4"-->
-<!--                                   preload="metadata" autoplay loop muted></video>-->
-<!--                            <video preload="auto" class="default-video" src="sm/assets/results/elephant/camel.mp4"-->
-<!--                                   preload="metadata" autoplay controls loop muted></video>-->
-<!--                            <div class="overlay-text">A camel crossing a road in a savannah</div>-->
-<!--                        </div>-->
-<!--                        <div class="video-wrapper">-->
-<!--                            <video preload="auto" class="hover-video" src="sm/assets/results/elephant/original.mp4"-->
-<!--                                   preload="metadata" autoplay loop muted></video>-->
-<!--                            <video preload="auto" class="default-video" src="sm/assets/results/elephant/giraffe.mp4"-->
-<!--                                   preload="metadata" autoplay controls loop muted></video>-->
-<!--                            <div class="overlay-text">A giraffe crossing a road in a savannah</div>-->
-<!--                        </div>-->
-<!--                        <div class="video-wrapper">-->
-<!--                            <video preload="auto" class="hover-video" src="sm/assets/results/frisbee_dog/original.mp4"-->
-<!--                                   preload="metadata" autoplay loop muted></video>-->
-<!--                            <video preload="auto" class="default-video" src="sm/assets/results/frisbee_dog/bear.mp4"-->
-<!--                                   preload="metadata" autoplay controls loop muted></video>-->
-<!--                            <div class="overlay-text">A bear catching a frisbee in the field</div>-->
-<!--                        </div>-->
-<!--                        <div class="video-wrapper">-->
-<!--                            <video preload="auto" class="hover-video" src="sm/assets/results/frisbee_dog/original.mp4"-->
-<!--                                   preload="metadata" autoplay loop muted></video>-->
-<!--                            <video preload="auto" class="default-video" src="sm/assets/results/frisbee_dog/cat.mp4"-->
-<!--                                   preload="metadata" autoplay controls loop muted></video>-->
-<!--                            <div class="overlay-text">A cat catching a frisbee in the field</div>-->
-<!--                        </div>-->
-<!--                        <div class="video-wrapper">-->
-<!--                            <video preload="auto" class="hover-video" src="sm/assets/results/locomotive/original.mp4"-->
-<!--                                   preload="metadata" autoplay loop muted></video>-->
-<!--                            <video preload="auto" class="default-video" src="sm/assets/results/locomotive/airplane.mp4"-->
-<!--                                   preload="metadata" autoplay controls loop muted></video>-->
-<!--                            <div class="overlay-text">An airplane driving in a forest</div>-->
-<!--                        </div>-->
-<!--                        <div class="video-wrapper">-->
-<!--                            <video preload="auto" class="hover-video" src="sm/assets/results/locomotive/original.mp4"-->
-<!--                                   preload="metadata" autoplay loop muted></video>-->
-<!--                            <video preload="auto" class="default-video" src="sm/assets/results/locomotive/motorbike.mp4"-->
-<!--                                   preload="metadata" autoplay controls loop muted></video>-->
-<!--                            <div class="overlay-text">A motorbike driving in a forest</div>-->
-<!--                        </div>-->
-<!--                        <div class="video-wrapper">-->
-<!--                            <video preload="auto" class="hover-video" src="sm/assets/results/rubber_duck/original.mp4"-->
-<!--                                   preload="metadata" autoplay loop muted></video>-->
-<!--                            <video preload="auto" class="default-video" src="sm/assets/results/rubber_duck/penguin.mp4"-->
-<!--                                   preload="metadata" autoplay controls loop muted></video>-->
-<!--                            <div class="overlay-text">A penguin swimming in outer space</div>-->
-<!--                        </div>-->
-<!--                        <div class="video-wrapper">-->
-<!--                            <video preload="auto" class="hover-video" src="sm/assets/results/rubber_duck/original.mp4"-->
-<!--                                   preload="metadata" autoplay loop muted></video>-->
-<!--                            <video preload="auto" class="default-video" src="sm/assets/results/rubber_duck/duck.mp4"-->
-<!--                                   preload="metadata" autoplay controls loop muted></video>-->
-<!--                            <div class="overlay-text">A duck swimming in a pond</div>-->
-<!--                        </div>-->
-<!--                        <div class="video-wrapper">-->
-<!--                            <video preload="auto" class="hover-video" src="sm/assets/results/libby/original.mp4"-->
-<!--                                   preload="metadata" autoplay loop muted></video>-->
-<!--                            <video preload="auto" class="default-video" src="sm/assets/results/libby/horse.mp4"-->
-<!--                                   preload="metadata" autoplay controls loop muted></video>-->
-<!--                            <div class="overlay-text">A horse running near a fence</div>-->
-<!--                        </div>-->
-<!--                        <div class="video-wrapper">-->
-<!--                            <video preload="auto" class="hover-video" src="sm/assets/results/libby/original.mp4"-->
-<!--                                   preload="metadata" autoplay loop muted></video>-->
-<!--                            <video preload="auto" class="default-video" src="sm/assets/results/libby/cat.mp4"-->
-<!--                                   preload="metadata" autoplay controls loop muted></video>-->
-<!--                            <div class="overlay-text">A cat running in the cosmos</div>-->
-<!--                        </div>-->
-<!--                        <div class="video-wrapper">-->
-<!--                            <video preload="auto" class="hover-video" src="sm/assets/results/chick/original.mp4"-->
-<!--                                   preload="metadata" autoplay loop muted></video>-->
-<!--                            <video preload="auto" class="default-video" src="sm/assets/results/chick/goose.mp4"-->
-<!--                                   preload="metadata" autoplay controls loop muted></video>-->
-<!--                            <div class="overlay-text">A goose walking in a field</div>-->
-<!--                        </div>-->
-<!--                        <div class="video-wrapper">-->
-<!--                            <video preload="auto" class="hover-video" src="sm/assets/results/chick/original.mp4"-->
-<!--                                   preload="metadata" autoplay loop muted></video>-->
-<!--                            <video preload="auto" class="default-video" src="sm/assets/results/chick/flamingo.mp4"-->
-<!--                                   preload="metadata" autoplay controls loop muted></video>-->
-<!--                            <div class="overlay-text">A flamingo walking in a field</div>-->
-<!--                        </div>-->
-<!--                        <div class="video-wrapper">-->
-<!--                            <video preload="auto" class="hover-video" src="sm/assets/results/airplane/original.mp4"-->
-<!--                                   preload="metadata" autoplay loop muted></video>-->
-<!--                            <video preload="auto" class="default-video" src="sm/assets/results/airplane/car.mp4"-->
-<!--                                   preload="metadata" autoplay controls loop muted></video>-->
-<!--                            <div class="overlay-text">A car driving on a road</div>-->
-<!--                        </div>-->
-<!--                        <div class="video-wrapper">-->
-<!--                            <video preload="auto" class="hover-video" src="sm/assets/results/airplane/original.mp4"-->
-<!--                                   preload="metadata" autoplay loop muted></video>-->
-<!--                            <video preload="auto" class="default-video" src="sm/assets/results/airplane/bus.mp4"-->
-<!--                                   preload="metadata" autoplay controls loop muted></video>-->
-<!--                            <div class="overlay-text">A bus driving on a road</div>-->
-<!--                        </div>-->
-                        <div class="video-wrapper">
-                            <video preload="auto" class="hover-video" src="sm/assets/results/bear/original.mp4"
-                                   preload="metadata" autoplay loop muted></video>
-                            <video preload="auto" class="default-video" src="sm/assets/results/bear/elephant.mp4"
-                                   preload="metadata" autoplay controls loop muted></video>
-                            <div class="overlay-text">An elephant walking on the rocks</div>
-                        </div>
-                        <div class="video-wrapper" style="float: right">
-                            <video preload="auto" class="hover-video" src="sm/assets/results/bear/original.mp4"
-                                   preload="metadata" autoplay loop muted></video>
-                            <video preload="auto" class="default-video" src="sm/assets/results/bear/camel.mp4"
-                                   preload="metadata" autoplay controls loop muted></video>
-                            <div class="overlay-text">A camel walking on icy rocks in antarctica</div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-</section>
-
 
 <!-- End video preload="auto"carousel -->
 
@@ -791,7 +508,7 @@
 <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>@article{tokenflow2023,
+      <pre><code>@article{yatim2023spacetime,
         title = {Space-Time Diffusion Features for Zero-Shot Text-Driven Motion Transfer},
         author = {Yatim, Danah and Fridman, Rafail and Bar-Tal, Omer and Kasten, Yoni and Dekel, Tali},
         journal={arXiv preprint arxiv:CNAHGEME},
@@ -801,63 +518,22 @@
 </section>
 <!--End BibTex citation -->
 
-<!--<section class="hero is-small">-->
-<!--    <div class="hero-body">-->
-<!--        <div class="container is-max-desktop">-->
-<!--            <div class="columns is-centered has-text-centered">-->
-<!--                <div class="column custom-width">-->
-<!--                    &lt;!&ndash; <h2 class="title is-3"></h2> &ndash;&gt;-->
-<!--                    <div class="content has-text-justified">-->
-<!--                        <p>-->
-<!--                            <a name="ref-tokenflow" id="ref-tokenflow"></a>-->
-<!--                            [1] Michal Geyer, Omer Bar-Tal, Shai Bagon, and Tali Dekel.-->
-<!--                            Tokenflow: Consistent diffusion features for consistent video editing.-->
-<!--                            arXiv preprint arxiv:2307.10373, 2023.-->
-<!--                        </p>-->
-<!--                        <a name="ref-gen1" id="ref-gen1"></a>-->
-<!--                        [2] Patrick Esser, Johnathan Chiu, Parmida Atighehchian,-->
-<!--                        Jonathan Granskog, and Anastasis Germanidis. Structure-->
-<!--                        and content-guided video synthesis with diffusion models.-->
-<!--                        arXiv preprint arXiv:2302.03011, 2023-->
-<!--                        <p>-->
-<!--                        <p>-->
-<!--                            <a name="ref-Tune-A-Video" id="ref-Tune-A-Video"></a>-->
-<!--                            [3] Jay Zhangjie Wu, Yixiao Ge, Xintao Wang, Stan Weixian-->
-<!--                            Lei, Yuchao Gu, Wynne Hsu, Ying Shan, Xiaohu Qie, and-->
-<!--                            Mike Zheng Shou. Tune-a-video: One-shot tuning of image-->
-<!--                            diffusion models for text-to-video generation. arXiv preprint-->
-<!--                            arXiv:2212.11565, 2022.-->
-<!--                        </p>-->
-<!--                        <p>-->
-<!--                        <p>-->
-<!--                            <a name="ref-Control-A-Video" id="ref-Control-A-Video"></a>-->
-<!--                            [4] Weifeng Chen, Jie Wu, Pan Xie, Hefeng Wu, Jiashi Li,-->
-<!--                            Xin Xia, Xuefeng Xiao, and Liang Lin. Control-a-video:-->
-<!--                            Controllable text-to-video generation with diffusion models,-->
-<!--                            2023.-->
-<!--                        </p>-->
-<!--                        <p>-->
-<!--                        <p>-->
-<!--                            <a name="ref-SA-NLA" id="ref-SA-NLA"></a>-->
-<!--                            [5] Yao-Chih Lee, Ji-Ze Genevieve Jang, Yi-Ting Chen, Elizabeth Qiu,-->
-<!--                            and Jia-Bin Huang. Shape-aware text-driven layered video editing. arXiv preprint-->
-<!--                            arXiv:2301.13173, 2023.-->
+<section class="hero is-small">
+    <div class="hero-body">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column custom-width">
+                    <!-- <h2 class="title is-3"></h2> -->
+                    <div class="content has-text-justified">
+                        <p>
+                            <a id="ref-motion"></a>
+                            [1] Ce Liu, Antonio Torralba, William T Freeman, Fredo Durand, and Edward H Adelson. Motion magnification. ACM transactions on graphics (TOG), 24(3):519–526, 2005
+                        </p>
 
-<!--                        </p>-->
-<!--                        <p>-->
-<!--                        <p>-->
-<!--                            <a name="ref-SDEDIT" id="ref-SDEDIT"></a>-->
-<!--                            [6] Chenlin Meng, Yutong He, Yang Song, Jiaming Song, Jia-->
-<!--                            jun Wu, Jun-Yan Zhu, and Stefano Ermon. SDEdit: Guided-->
-<!--                            image synthesis and editing with stochastic differential-->
-<!--                            equations. In International Conference on Learning-->
-<!--                            Representations, 2022-->
-
-<!--                        </p>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- Statcounter tracking code -->
 

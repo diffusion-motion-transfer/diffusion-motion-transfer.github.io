@@ -358,6 +358,7 @@ body {
 
   .card-body{
     /*max-height:30px*/
+    font-size: 20px;
   }
 
   /* .slick-slide emulates .col- */
