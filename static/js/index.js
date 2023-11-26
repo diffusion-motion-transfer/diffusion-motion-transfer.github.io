@@ -36,14 +36,15 @@ const breakpoint = {
 // bootstrap 4 responsive multi column slick carousel
 $(document).ready(function(){
 $('#slick').slick({
-  autoplay: true,
-  autoplaySpeed: 3000,
+  autoplay: false,
+  autoplaySpeed: 6000,
   draggable: true,
   pauseOnHover: false,
   infinite: true,
   dots: false,
   arrows: true,
   speed: 1000,
+  adaptiveHeight: true,
 
   mobileFirst: true,
 
@@ -53,8 +54,8 @@ $('#slick').slick({
   responsive: [{
       breakpoint: breakpoint.sm,
       settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2
+        slidesToShow: 1,
+        slidesToScroll: 1
       }
     },
     {
@@ -67,15 +68,15 @@ $('#slick').slick({
     {
       breakpoint: breakpoint.lg,
       settings: {
-        slidesToShow: 3,
-        slidesToScroll: 3
+        slidesToShow: 2,
+        slidesToScroll: 2
       }
     },
     {
       breakpoint: breakpoint.xl,
       settings: {
-        slidesToShow: 3,
-        slidesToScroll: 3
+        slidesToShow: 2,
+        slidesToScroll: 2
       }
     }
   ]
