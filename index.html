@@ -433,38 +433,33 @@
                 <div class="column is-">
                     <h2 class="title is-3">Space-Time Analysis of Diffusion Features</h2>
                     <div class="content has-text-justified">
-
-                        <table>
+                        <p>
+                        We focus our analysis on features extracted from the intermediate layers
+                        activations of the video model. To gain a better understanding of what the features
+                        $\{\boldsymbol{f}(\boldsymbol{x}_t)\}_{t=1}^T$  extracted for each diffusion timestep $t$ encode,
+                        we adopt the concept of “feature inversion”. We observe that videos produced by feature inversion nearly
+                        reconstruct the original frames, regardless of the random inilialization (i.e different seeds).
+                        This suggests that the features encode the original objects' pose, shape, and appearance.
+                        <br>
+                        To reduce dependency on pixel-level information and enhance robustness to
+                        variations in appearance and shape, we introduce a new feature descriptor termed
+                        <strong>Spatial Marginal Mean (SMM)</strong>:
+                        </p>
+                        <p align="center">
+                         $\texttt{SMM}[\boldsymbol{f}(\boldsymbol{x}_t)] = \frac{1}{M\cdot N} \sum_{i=1}^M \sum_{j=1}^N \boldsymbol{f}(\boldsymbol{x}_t)_{i,j}$
+                        </p>
+                        <p>
+                        This descriptor is obtained by averaging the space-time features along the spatial dimensions.
+                        Despite collapsing the spatial dimensions, the SMM features retain information about objects' pose and semantic layout,
+                        showcasing robustness to appearance and shape variations.
+                        <br> The following videos demonstrate sample results for feature inversion using the original features and the SMM features.  Each row represents a different random starting point.
+                        </p>
+                        <table id="analysisTable">
                             <tbody>
                             <tr>
-                                <td colspan="3">
-                                    <p>
-                                        We focus our analysis on features extracted from the intermediate layers
-                                        activations of the video model. To gain a better understanding of what the features
-                                        $\{\boldsymbol{f}(\boldsymbol{x}_t)\}_{t=1}^T$  extracted for each diffusion timestep $t$ encode,
-                                        we adopt the concept of “feature inversion”. We observe that videos produced by feature inversion nearly
-                                        reconstruct the original frames, regardless of the random inilialization (i.e different seeds).
-                                        This suggests that the features encode the original objects' pose, shape, and appearance.
-                                        <br>
-                                        To reduce dependency on pixel-level information and enhance robustness to
-                                        variations in appearance and shape, we introduce a new feature descriptor termed
-                                        <strong>Spatial Marginal Mean (SMM)</strong>:
-                                        </p>
-                                        <p align="center">
-                                         $\texttt{SMM}[\boldsymbol{f}(\boldsymbol{x}_t)] = \frac{1}{M\cdot N} \sum_{i=1}^M \sum_{j=1}^N \boldsymbol{f}(\boldsymbol{x}_t)_{i,j}$
-                                        </p>
-                                        <p>
-                                        This descriptor is obtained by averaging the space-time features along the spatial dimensions.
-                                        Despite collapsing the spatial dimensions, the SMM features retain information about objects' pose and semantic layout,
-                                        showcasing robustness to appearance and shape variations.
-                                        <br> The following videos demonstrate sample results for feature inversion using the original features and the SMM features.  Each row represents a different random starting point.
-                                        </p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="font-size: 16px; text-align: center;">Original</td>
-                                <td style="font-size: 16px; text-align: center;">Space-time feature loss</td>
-                                <td style="font-size: 16px; text-align: center;">SMM feature loss</td>
+                                <th style="font-size: 16px; text-align: center;">Original</th>
+                                <th style="font-size: 16px; text-align: center;">Space-time feature loss</th>
+                                <th style="font-size: 16px; text-align: center;">SMM feature loss</th>
                             </tr>
                             <tr class="video-row">
                                 <td style="text-align: center;">
@@ -804,9 +799,9 @@
 
         <!-- End of Statcounter Code -->
 
-        <script>
-            includeHTML();
-        </script>
+<!--        <script>-->
+<!--            includeHTML();-->
+<!--        </script>-->
 
 </body>
 

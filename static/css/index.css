@@ -447,3 +447,7 @@ body {
   }
 
 }
+
+.content table td, .content table th{
+  border-width: 0 0 0;
+}
