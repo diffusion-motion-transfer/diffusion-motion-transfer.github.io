@@ -428,7 +428,7 @@
         <div class="container is-max-desktop">
             <div class="columns is-centered has-text-centered">
                 <div class="column is-">
-                    <h2 class="title is-3">Method</h2>
+                    <h2 class="title is-3">SMM: Spatial Marginal Mean</strong></h2>
                     <div class="content has-text-justified">
 
                         <table>
@@ -436,9 +436,20 @@
                             <tr>
                                 <td colspan="3">
                                     <p>
+                                        We focus our analysis on features extracted from the intermediate layers
+                                        activations of the video model. To gain a better understanding of what the features
+                                        $\mathcal{\bs{f}(\bs{x}_t)\}_{t=1}^T$  encode,
+                                        we adopt the concept of “feature inversion”. We observe that feature inversion videos nearly
+                                        reconstruct the original frames, regardless of the random inilialization (i.e different seeds).
+                                        This suggests that the features encode the original objects' pose, shape, and appearance.
+                                        <br>
                                         To reduce dependency on pixel-level information and enhance robustness to
-                                        variations in appearance and shape,
-                                        we introduce a new feature descriptor termed "Spatial Marginal Mean (SMM)."
+                                        variations in appearance and shape, we introduce a new feature descriptor termed
+                                        <strong>Spatial Marginal Mean (SMM)</strong>: <br>
+
+                                         \texttt{SMM}[\bs{f}(\bs{x}_t)] = \frac{1}{M\cdot N} \sum_{i=1}^M \sum_{j=1}^N \bs{f}(\bs{x}_t)_{i,j} \afterfigure
+                                        <br>
+
                                         This descriptor is obtained by averaging the space-time features along the
                                         spatial dimensions.
                                         Despite collapsing the spatial dimensions, the SMM features retain information
