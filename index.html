@@ -69,7 +69,7 @@
                     </div>
                     <!-- Supplementary PDF link -->
                     <span class="link-block">
-                      <a href="sm/sm.html" target="_blank"
+                      <a href="sm/index.html" target="_blank"
                          class="external-link button is-normal is-rounded is-dark">
                       <span>Supplementary Material</span>
                     </a>
@@ -431,7 +431,7 @@
         <div class="container is-max-desktop">
             <div class="columns is-centered has-text-centered">
                 <div class="column is-">
-                    <h2 class="title is-3">SMM: Spatial Marginal Mean</strong></h2>
+                    <h2 class="title is-3">Space-Time Analysis of Diffusion Features</h2>
                     <div class="content has-text-justified">
 
                         <table>
@@ -441,24 +441,24 @@
                                     <p>
                                         We focus our analysis on features extracted from the intermediate layers
                                         activations of the video model. To gain a better understanding of what the features
-                                        $\mathcal{\bs{f}(\bs{x}_t)\}_{t=1}^T$  encode,
-                                        we adopt the concept of “feature inversion”. We observe that feature inversion videos nearly
+                                        $\{\boldsymbol{f}(\boldsymbol{x}_t)\}_{t=1}^T$  extracted for each diffusion timestep $t$ encode,
+                                        we adopt the concept of “feature inversion”. We observe that videos produced by feature inversion nearly
                                         reconstruct the original frames, regardless of the random inilialization (i.e different seeds).
                                         This suggests that the features encode the original objects' pose, shape, and appearance.
                                         <br>
                                         To reduce dependency on pixel-level information and enhance robustness to
                                         variations in appearance and shape, we introduce a new feature descriptor termed
-                                        <strong>Spatial Marginal Mean (SMM)</strong>: <br>
-
-                                         \texttt{SMM}[\bs{f}(\bs{x}_t)] = \frac{1}{M\cdot N} \sum_{i=1}^M \sum_{j=1}^N \bs{f}(\bs{x}_t)_{i,j} \afterfigure
-                                        <br>
-
-                                        This descriptor is obtained by averaging the space-time features along the
-                                        spatial dimensions.
-                                        Despite collapsing the spatial dimensions, the SMM features retain information
-                                        about objects' pose and semantic layout,
+                                        <strong>Spatial Marginal Mean (SMM)</strong>:
+                                        </p>
+                                        <p align="center">
+                                         $\texttt{SMM}[\boldsymbol{f}(\boldsymbol{x}_t)] = \frac{1}{M\cdot N} \sum_{i=1}^M \sum_{j=1}^N \boldsymbol{f}(\boldsymbol{x}_t)_{i,j}$
+                                        </p>
+                                        <p>
+                                        This descriptor is obtained by averaging the space-time features along the spatial dimensions.
+                                        Despite collapsing the spatial dimensions, the SMM features retain information about objects' pose and semantic layout,
                                         showcasing robustness to appearance and shape variations.
-                                    </p>
+                                        <br> The following videos demonstrate sample results for feature inversion using the original features and the SMM features.  Each row represents a different random starting point.
+                                        </p>
                                 </td>
                             </tr>
                             <tr>
@@ -506,13 +506,6 @@
                                     </a>
                                 </td>
                             </tr>
-                            <tr>
-
-                                <td colspan="3">
-                                    <p style="margin-top: 20px; margin-bottom: -12px;">
-                                        Our key finding is
-                                </td>
-                            </tr>
                             </tbody>
                         </table>
 
@@ -524,195 +517,221 @@
 </section>
 <!--End paper poster -->
 
-<!-- Video grid -->
-
-<section class="hero is-light">
+<section class="hero is-small">
     <div class="hero-body">
         <div class="container is-max-desktop">
             <div class="columns is-centered has-text-centered">
-                <div class="column">
-                    <h2 class="title is-3">Motion Transfer results</h2>
+                <div class="column is-">
+                    <h2 class="title is-3">Method</h2>
                     <div class="content has-text-justified">
-                            <p style="margin-top: -12px;">
-                                Hover over the videos to see the original video and text prompts. Please see our
-                                <a style="color: blue" href="./sm/supp.html">Supplementary Materials</a> for more results.
-                            </p>
-                        <div class="video-wrapper">
-                            <video preload="auto" class="hover-video" src="sm/assets/results/dog/original.mp4"
-                                   preload="metadata" autoplay loop muted></video>
-                            <video preload="auto" class="default-video" src="sm/assets/results/dog/lion.mp4"
-                                   preload="metadata" autoplay controls loop muted></video>
-                            <div class="overlay-text">A lion sitting in a forest</div>
-                        </div>
-                        <div class="video-wrapper">
-                            <video preload="auto" class="hover-video" src="sm/assets/results/dog/original.mp4"
-                                   preload="metadata" autoplay loop muted></video>
-                            <video preload="auto" class="default-video" src="sm/assets/results/dog/dragon.mp4"
-                                   preload="metadata" autoplay controls loop muted></video>
-                            <div class="overlay-text">A dragon sitting in a floral forest</div>
-                        </div>
-                        <div class="video-wrapper">
-                            <video preload="auto" class="hover-video" src="sm/assets/results/car-turn/original.mp4"
-                                   preload="metadata" autoplay loop muted></video>
-                            <video preload="auto" class="default-video" src="sm/assets/results/car-turn/bike.mp4"
-                                   preload="metadata" autoplay controls loop muted></video>
-                            <div class="overlay-text">A bike driving in a snowy forest</div>
-                        </div>
-                        <div class="video-wrapper">
-                            <video preload="auto" class="hover-video" src="sm/assets/results/car-turn/original.mp4"
-                                   preload="metadata" autoplay loop muted></video>
-                            <video preload="auto" class="default-video" src="sm/assets/results/car-turn/train.mp4"
-                                   preload="metadata" autoplay controls loop muted></video>
-                            <div class="overlay-text">A train riding on rails in autumn view</div>
-                        </div>
-                        <div class="video-wrapper">
-                            <video preload="auto" class="default-video" src="sm/assets/results/dog_jump/horse.mp4"
-                                   preload="metadata" autoplay loop muted></video>
-                            <video preload="auto" class="hover-video" src="sm/assets/results/dog_jump/original.mp4"
-                                   preload="metadata" autoplay controls loop muted></video>
-                            <div class="overlay-text">A horse jumping into a river</div>
-                        </div>
-                        <div class="video-wrapper">
-                            <video preload="auto" class="default-video" src="sm/assets/results/dog_jump/dolphin.mp4"
-                                   preload="metadata" autoplay loop muted></video>
-                            <video preload="auto" class="hover-video" src="sm/assets/results/dog_jump/original.mp4"
-                                   preload="metadata" autoplay controls loop muted></video>
-                            <div class="overlay-text">A dolphin jumping into the ocean</div>
-                        </div>
-                        <div class="video-wrapper">
-                            <video preload="auto" class="hover-video" src="sm/assets/results/cute_kittens/original.mp4"
-                                   preload="metadata" autoplay loop muted></video>
-                            <video preload="auto" class="default-video" src="sm/assets/results/cute_kittens/monkeys.mp4"
-                                   preload="metadata" autoplay controls loop muted></video>
-                            <div class="overlay-text">Monkeys playing with coconuts</div>
-                        </div>
-                        <div class="video-wrapper">
-                            <video preload="auto" class="default-video" src="sm/assets/results/cute_kittens/rabbits.mp4"
-                                   preload="metadata" autoplay loop muted></video>
-                            <video preload="auto" class="hover-video" src="sm/assets/results/cute_kittens/original.mp4"
-                                   preload="metadata" autoplay controls loop muted></video>
-                            <div class="overlay-text">Rabbits playing with easter eggs</div>
-                        </div>
-                        <div class="video-wrapper">
-                            <video preload="auto" class="hover-video" src="sm/assets/results/elephant/original.mp4"
-                                   preload="metadata" autoplay loop muted></video>
-                            <video preload="auto" class="default-video" src="sm/assets/results/elephant/camel.mp4"
-                                   preload="metadata" autoplay controls loop muted></video>
-                            <div class="overlay-text">A camel crossing a road in a savannah</div>
-                        </div>
-                        <div class="video-wrapper">
-                            <video preload="auto" class="hover-video" src="sm/assets/results/elephant/original.mp4"
-                                   preload="metadata" autoplay loop muted></video>
-                            <video preload="auto" class="default-video" src="sm/assets/results/elephant/giraffe.mp4"
-                                   preload="metadata" autoplay controls loop muted></video>
-                            <div class="overlay-text">A giraffe crossing a road in a savannah</div>
-                        </div>
-                        <div class="video-wrapper">
-                            <video preload="auto" class="hover-video" src="sm/assets/results/frisbee_dog/original.mp4"
-                                   preload="metadata" autoplay loop muted></video>
-                            <video preload="auto" class="default-video" src="sm/assets/results/frisbee_dog/bear.mp4"
-                                   preload="metadata" autoplay controls loop muted></video>
-                            <div class="overlay-text">A bear catching a frisbee in the field</div>
-                        </div>
-                        <div class="video-wrapper">
-                            <video preload="auto" class="hover-video" src="sm/assets/results/frisbee_dog/original.mp4"
-                                   preload="metadata" autoplay loop muted></video>
-                            <video preload="auto" class="default-video" src="sm/assets/results/frisbee_dog/cat.mp4"
-                                   preload="metadata" autoplay controls loop muted></video>
-                            <div class="overlay-text">A cat catching a frisbee in the field</div>
-                        </div>
-                        <div class="video-wrapper">
-                            <video preload="auto" class="hover-video" src="sm/assets/results/locomotive/original.mp4"
-                                   preload="metadata" autoplay loop muted></video>
-                            <video preload="auto" class="default-video" src="sm/assets/results/locomotive/airplane.mp4"
-                                   preload="metadata" autoplay controls loop muted></video>
-                            <div class="overlay-text">An airplane driving in a forest</div>
-                        </div>
-                        <div class="video-wrapper">
-                            <video preload="auto" class="hover-video" src="sm/assets/results/locomotive/original.mp4"
-                                   preload="metadata" autoplay loop muted></video>
-                            <video preload="auto" class="default-video" src="sm/assets/results/locomotive/motorbike.mp4"
-                                   preload="metadata" autoplay controls loop muted></video>
-                            <div class="overlay-text">A motorbike driving in a forest</div>
-                        </div>
-                        <div class="video-wrapper">
-                            <video preload="auto" class="hover-video" src="sm/assets/results/rubber_duck/original.mp4"
-                                   preload="metadata" autoplay loop muted></video>
-                            <video preload="auto" class="default-video" src="sm/assets/results/rubber_duck/penguin.mp4"
-                                   preload="metadata" autoplay controls loop muted></video>
-                            <div class="overlay-text">A penguin swimming in outer space</div>
-                        </div>
-                        <div class="video-wrapper">
-                            <video preload="auto" class="hover-video" src="sm/assets/results/rubber_duck/original.mp4"
-                                   preload="metadata" autoplay loop muted></video>
-                            <video preload="auto" class="default-video" src="sm/assets/results/rubber_duck/duck.mp4"
-                                   preload="metadata" autoplay controls loop muted></video>
-                            <div class="overlay-text">A duck swimming in a pond</div>
-                        </div>
-                        <div class="video-wrapper">
-                            <video preload="auto" class="hover-video" src="sm/assets/results/libby/original.mp4"
-                                   preload="metadata" autoplay loop muted></video>
-                            <video preload="auto" class="default-video" src="sm/assets/results/libby/horse.mp4"
-                                   preload="metadata" autoplay controls loop muted></video>
-                            <div class="overlay-text">A horse running near a fence</div>
-                        </div>
-                        <div class="video-wrapper">
-                            <video preload="auto" class="hover-video" src="sm/assets/results/libby/original.mp4"
-                                   preload="metadata" autoplay loop muted></video>
-                            <video preload="auto" class="default-video" src="sm/assets/results/libby/cat.mp4"
-                                   preload="metadata" autoplay controls loop muted></video>
-                            <div class="overlay-text">A cat running in the cosmos</div>
-                        </div>
-                        <div class="video-wrapper">
-                            <video preload="auto" class="hover-video" src="sm/assets/results/chick/original.mp4"
-                                   preload="metadata" autoplay loop muted></video>
-                            <video preload="auto" class="default-video" src="sm/assets/results/chick/goose.mp4"
-                                   preload="metadata" autoplay controls loop muted></video>
-                            <div class="overlay-text">A goose walking in a field</div>
-                        </div>
-                        <div class="video-wrapper">
-                            <video preload="auto" class="hover-video" src="sm/assets/results/chick/original.mp4"
-                                   preload="metadata" autoplay loop muted></video>
-                            <video preload="auto" class="default-video" src="sm/assets/results/chick/flamingo.mp4"
-                                   preload="metadata" autoplay controls loop muted></video>
-                            <div class="overlay-text">A flamingo walking in a field</div>
-                        </div>
-                        <div class="video-wrapper">
-                            <video preload="auto" class="hover-video" src="sm/assets/results/airplane/original.mp4"
-                                   preload="metadata" autoplay loop muted></video>
-                            <video preload="auto" class="default-video" src="sm/assets/results/airplane/car.mp4"
-                                   preload="metadata" autoplay controls loop muted></video>
-                            <div class="overlay-text">A car driving on a road</div>
-                        </div>
-                        <div class="video-wrapper">
-                            <video preload="auto" class="hover-video" src="sm/assets/results/airplane/original.mp4"
-                                   preload="metadata" autoplay loop muted></video>
-                            <video preload="auto" class="default-video" src="sm/assets/results/airplane/bus.mp4"
-                                   preload="metadata" autoplay controls loop muted></video>
-                            <div class="overlay-text">A bus driving on a road</div>
-                        </div>
-                        <div class="video-wrapper">
-                            <video preload="auto" class="hover-video" src="sm/assets/results/bear/original.mp4"
-                                   preload="metadata" autoplay loop muted></video>
-                            <video preload="auto" class="default-video" src="sm/assets/results/bear/elephant.mp4"
-                                   preload="metadata" autoplay controls loop muted></video>
-                            <div class="overlay-text">An elephant walking on the rocks</div>
-                        </div>
-                        <div class="video-wrapper" style="float: right">
-                            <video preload="auto" class="hover-video" src="sm/assets/results/bear/original.mp4"
-                                   preload="metadata" autoplay loop muted></video>
-                            <video preload="auto" class="default-video" src="sm/assets/results/bear/camel.mp4"
-                                   preload="metadata" autoplay controls loop muted></video>
-                            <div class="overlay-text">A camel walking on icy rocks in antarctica</div>
-                        </div>
+                         Given an input video, we apply DDIM inversion and extract space-time features $\boldsymbol{f}\in \mathbb{R}^{F\times M \times N \times D}$
+                        from intermediate layer activations. We obtain our Spatial Marginal Mean (SMM) feature $\texttt{SMM}[\boldsymbol{f}] \in \mathbb{R}^{F \times D}$ by computing
+                        the mean over the spatial dimensions. We observed that directly optimizing for SMM features often prevents us from deviating from the original appearance.
+                        To circumvent this problem, we propose an objective function that aims to preserve the pairwise differences of the SMM features, rather than their exact values,
+                        and utilize for guidance during sampling. See Sec. 4 of the paper for more details.
+                        <br>
+                        <br>
+
+                        <img src="sm/assets/pics/pipeline.png" alt="pipeline" width="100%">
+
+
 
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
 </section>
+
+<!-- OVERLAY VIDEOS -->
+
+<!--<section class="hero is-light">-->
+<!--    <div class="hero-body">-->
+<!--        <div class="container is-max-desktop">-->
+<!--            <div class="columns is-centered has-text-centered">-->
+<!--                <div class="column">-->
+<!--                    <h2 class="title is-3">Motion Transfer results</h2>-->
+<!--                    <div class="content has-text-justified">-->
+<!--                            <p style="margin-top: -12px;">-->
+<!--                                Hover over the videos to see the original video and text prompts. Please see our-->
+<!--                                <a style="color: blue" href="./sm/supp.html">Supplementary Materials</a> for more results.-->
+<!--                            </p>-->
+<!--                        <div class="video-wrapper">-->
+<!--                            <video preload="auto" class="hover-video" src="sm/assets/results/dog/original.mp4"-->
+<!--                                   preload="metadata" autoplay loop muted></video>-->
+<!--                            <video preload="auto" class="default-video" src="sm/assets/results/dog/lion.mp4"-->
+<!--                                   preload="metadata" autoplay controls loop muted></video>-->
+<!--                            <div class="overlay-text">A lion sitting in a forest</div>-->
+<!--                        </div>-->
+<!--                        <div class="video-wrapper">-->
+<!--                            <video preload="auto" class="hover-video" src="sm/assets/results/dog/original.mp4"-->
+<!--                                   preload="metadata" autoplay loop muted></video>-->
+<!--                            <video preload="auto" class="default-video" src="sm/assets/results/dog/dragon.mp4"-->
+<!--                                   preload="metadata" autoplay controls loop muted></video>-->
+<!--                            <div class="overlay-text">A dragon sitting in a floral forest</div>-->
+<!--                        </div>-->
+<!--                        <div class="video-wrapper">-->
+<!--                            <video preload="auto" class="hover-video" src="sm/assets/results/car-turn/original.mp4"-->
+<!--                                   preload="metadata" autoplay loop muted></video>-->
+<!--                            <video preload="auto" class="default-video" src="sm/assets/results/car-turn/bike.mp4"-->
+<!--                                   preload="metadata" autoplay controls loop muted></video>-->
+<!--                            <div class="overlay-text">A bike driving in a snowy forest</div>-->
+<!--                        </div>-->
+<!--                        <div class="video-wrapper">-->
+<!--                            <video preload="auto" class="hover-video" src="sm/assets/results/car-turn/original.mp4"-->
+<!--                                   preload="metadata" autoplay loop muted></video>-->
+<!--                            <video preload="auto" class="default-video" src="sm/assets/results/car-turn/train.mp4"-->
+<!--                                   preload="metadata" autoplay controls loop muted></video>-->
+<!--                            <div class="overlay-text">A train riding on rails in autumn view</div>-->
+<!--                        </div>-->
+<!--                        <div class="video-wrapper">-->
+<!--                            <video preload="auto" class="default-video" src="sm/assets/results/dog_jump/horse.mp4"-->
+<!--                                   preload="metadata" autoplay loop muted></video>-->
+<!--                            <video preload="auto" class="hover-video" src="sm/assets/results/dog_jump/original.mp4"-->
+<!--                                   preload="metadata" autoplay controls loop muted></video>-->
+<!--                            <div class="overlay-text">A horse jumping into a river</div>-->
+<!--                        </div>-->
+<!--                        <div class="video-wrapper">-->
+<!--                            <video preload="auto" class="default-video" src="sm/assets/results/dog_jump/dolphin.mp4"-->
+<!--                                   preload="metadata" autoplay loop muted></video>-->
+<!--                            <video preload="auto" class="hover-video" src="sm/assets/results/dog_jump/original.mp4"-->
+<!--                                   preload="metadata" autoplay controls loop muted></video>-->
+<!--                            <div class="overlay-text">A dolphin jumping into the ocean</div>-->
+<!--                        </div>-->
+<!--                        <div class="video-wrapper">-->
+<!--                            <video preload="auto" class="hover-video" src="sm/assets/results/cute_kittens/original.mp4"-->
+<!--                                   preload="metadata" autoplay loop muted></video>-->
+<!--                            <video preload="auto" class="default-video" src="sm/assets/results/cute_kittens/monkeys.mp4"-->
+<!--                                   preload="metadata" autoplay controls loop muted></video>-->
+<!--                            <div class="overlay-text">Monkeys playing with coconuts</div>-->
+<!--                        </div>-->
+<!--                        <div class="video-wrapper">-->
+<!--                            <video preload="auto" class="default-video" src="sm/assets/results/cute_kittens/rabbits.mp4"-->
+<!--                                   preload="metadata" autoplay loop muted></video>-->
+<!--                            <video preload="auto" class="hover-video" src="sm/assets/results/cute_kittens/original.mp4"-->
+<!--                                   preload="metadata" autoplay controls loop muted></video>-->
+<!--                            <div class="overlay-text">Rabbits playing with easter eggs</div>-->
+<!--                        </div>-->
+<!--                        <div class="video-wrapper">-->
+<!--                            <video preload="auto" class="hover-video" src="sm/assets/results/elephant/original.mp4"-->
+<!--                                   preload="metadata" autoplay loop muted></video>-->
+<!--                            <video preload="auto" class="default-video" src="sm/assets/results/elephant/camel.mp4"-->
+<!--                                   preload="metadata" autoplay controls loop muted></video>-->
+<!--                            <div class="overlay-text">A camel crossing a road in a savannah</div>-->
+<!--                        </div>-->
+<!--                        <div class="video-wrapper">-->
+<!--                            <video preload="auto" class="hover-video" src="sm/assets/results/elephant/original.mp4"-->
+<!--                                   preload="metadata" autoplay loop muted></video>-->
+<!--                            <video preload="auto" class="default-video" src="sm/assets/results/elephant/giraffe.mp4"-->
+<!--                                   preload="metadata" autoplay controls loop muted></video>-->
+<!--                            <div class="overlay-text">A giraffe crossing a road in a savannah</div>-->
+<!--                        </div>-->
+<!--                        <div class="video-wrapper">-->
+<!--                            <video preload="auto" class="hover-video" src="sm/assets/results/frisbee_dog/original.mp4"-->
+<!--                                   preload="metadata" autoplay loop muted></video>-->
+<!--                            <video preload="auto" class="default-video" src="sm/assets/results/frisbee_dog/bear.mp4"-->
+<!--                                   preload="metadata" autoplay controls loop muted></video>-->
+<!--                            <div class="overlay-text">A bear catching a frisbee in the field</div>-->
+<!--                        </div>-->
+<!--                        <div class="video-wrapper">-->
+<!--                            <video preload="auto" class="hover-video" src="sm/assets/results/frisbee_dog/original.mp4"-->
+<!--                                   preload="metadata" autoplay loop muted></video>-->
+<!--                            <video preload="auto" class="default-video" src="sm/assets/results/frisbee_dog/cat.mp4"-->
+<!--                                   preload="metadata" autoplay controls loop muted></video>-->
+<!--                            <div class="overlay-text">A cat catching a frisbee in the field</div>-->
+<!--                        </div>-->
+<!--                        <div class="video-wrapper">-->
+<!--                            <video preload="auto" class="hover-video" src="sm/assets/results/locomotive/original.mp4"-->
+<!--                                   preload="metadata" autoplay loop muted></video>-->
+<!--                            <video preload="auto" class="default-video" src="sm/assets/results/locomotive/airplane.mp4"-->
+<!--                                   preload="metadata" autoplay controls loop muted></video>-->
+<!--                            <div class="overlay-text">An airplane driving in a forest</div>-->
+<!--                        </div>-->
+<!--                        <div class="video-wrapper">-->
+<!--                            <video preload="auto" class="hover-video" src="sm/assets/results/locomotive/original.mp4"-->
+<!--                                   preload="metadata" autoplay loop muted></video>-->
+<!--                            <video preload="auto" class="default-video" src="sm/assets/results/locomotive/motorbike.mp4"-->
+<!--                                   preload="metadata" autoplay controls loop muted></video>-->
+<!--                            <div class="overlay-text">A motorbike driving in a forest</div>-->
+<!--                        </div>-->
+<!--                        <div class="video-wrapper">-->
+<!--                            <video preload="auto" class="hover-video" src="sm/assets/results/rubber_duck/original.mp4"-->
+<!--                                   preload="metadata" autoplay loop muted></video>-->
+<!--                            <video preload="auto" class="default-video" src="sm/assets/results/rubber_duck/penguin.mp4"-->
+<!--                                   preload="metadata" autoplay controls loop muted></video>-->
+<!--                            <div class="overlay-text">A penguin swimming in outer space</div>-->
+<!--                        </div>-->
+<!--                        <div class="video-wrapper">-->
+<!--                            <video preload="auto" class="hover-video" src="sm/assets/results/rubber_duck/original.mp4"-->
+<!--                                   preload="metadata" autoplay loop muted></video>-->
+<!--                            <video preload="auto" class="default-video" src="sm/assets/results/rubber_duck/duck.mp4"-->
+<!--                                   preload="metadata" autoplay controls loop muted></video>-->
+<!--                            <div class="overlay-text">A duck swimming in a pond</div>-->
+<!--                        </div>-->
+<!--                        <div class="video-wrapper">-->
+<!--                            <video preload="auto" class="hover-video" src="sm/assets/results/libby/original.mp4"-->
+<!--                                   preload="metadata" autoplay loop muted></video>-->
+<!--                            <video preload="auto" class="default-video" src="sm/assets/results/libby/horse.mp4"-->
+<!--                                   preload="metadata" autoplay controls loop muted></video>-->
+<!--                            <div class="overlay-text">A horse running near a fence</div>-->
+<!--                        </div>-->
+<!--                        <div class="video-wrapper">-->
+<!--                            <video preload="auto" class="hover-video" src="sm/assets/results/libby/original.mp4"-->
+<!--                                   preload="metadata" autoplay loop muted></video>-->
+<!--                            <video preload="auto" class="default-video" src="sm/assets/results/libby/cat.mp4"-->
+<!--                                   preload="metadata" autoplay controls loop muted></video>-->
+<!--                            <div class="overlay-text">A cat running in the cosmos</div>-->
+<!--                        </div>-->
+<!--                        <div class="video-wrapper">-->
+<!--                            <video preload="auto" class="hover-video" src="sm/assets/results/chick/original.mp4"-->
+<!--                                   preload="metadata" autoplay loop muted></video>-->
+<!--                            <video preload="auto" class="default-video" src="sm/assets/results/chick/goose.mp4"-->
+<!--                                   preload="metadata" autoplay controls loop muted></video>-->
+<!--                            <div class="overlay-text">A goose walking in a field</div>-->
+<!--                        </div>-->
+<!--                        <div class="video-wrapper">-->
+<!--                            <video preload="auto" class="hover-video" src="sm/assets/results/chick/original.mp4"-->
+<!--                                   preload="metadata" autoplay loop muted></video>-->
+<!--                            <video preload="auto" class="default-video" src="sm/assets/results/chick/flamingo.mp4"-->
+<!--                                   preload="metadata" autoplay controls loop muted></video>-->
+<!--                            <div class="overlay-text">A flamingo walking in a field</div>-->
+<!--                        </div>-->
+<!--                        <div class="video-wrapper">-->
+<!--                            <video preload="auto" class="hover-video" src="sm/assets/results/airplane/original.mp4"-->
+<!--                                   preload="metadata" autoplay loop muted></video>-->
+<!--                            <video preload="auto" class="default-video" src="sm/assets/results/airplane/car.mp4"-->
+<!--                                   preload="metadata" autoplay controls loop muted></video>-->
+<!--                            <div class="overlay-text">A car driving on a road</div>-->
+<!--                        </div>-->
+<!--                        <div class="video-wrapper">-->
+<!--                            <video preload="auto" class="hover-video" src="sm/assets/results/airplane/original.mp4"-->
+<!--                                   preload="metadata" autoplay loop muted></video>-->
+<!--                            <video preload="auto" class="default-video" src="sm/assets/results/airplane/bus.mp4"-->
+<!--                                   preload="metadata" autoplay controls loop muted></video>-->
+<!--                            <div class="overlay-text">A bus driving on a road</div>-->
+<!--                        </div>-->
+<!--                        <div class="video-wrapper">-->
+<!--                            <video preload="auto" class="hover-video" src="sm/assets/results/bear/original.mp4"-->
+<!--                                   preload="metadata" autoplay loop muted></video>-->
+<!--                            <video preload="auto" class="default-video" src="sm/assets/results/bear/elephant.mp4"-->
+<!--                                   preload="metadata" autoplay controls loop muted></video>-->
+<!--                            <div class="overlay-text">An elephant walking on the rocks</div>-->
+<!--                        </div>-->
+<!--                        <div class="video-wrapper" style="float: right">-->
+<!--                            <video preload="auto" class="hover-video" src="sm/assets/results/bear/original.mp4"-->
+<!--                                   preload="metadata" autoplay loop muted></video>-->
+<!--                            <video preload="auto" class="default-video" src="sm/assets/results/bear/camel.mp4"-->
+<!--                                   preload="metadata" autoplay controls loop muted></video>-->
+<!--                            <div class="overlay-text">A camel walking on icy rocks in antarctica</div>-->
+<!--                        </div>-->
+
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--</section>-->
 
 
 <!-- End video preload="auto"carousel -->
