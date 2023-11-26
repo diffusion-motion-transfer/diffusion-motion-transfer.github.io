@@ -36,7 +36,7 @@ const breakpoint = {
 // bootstrap 4 responsive multi column slick carousel
 $(document).ready(function(){
 $('#slick').slick({
-  autoplay: false,
+  autoplay: true,
   autoplaySpeed: 6000,
   draggable: true,
   pauseOnHover: false,

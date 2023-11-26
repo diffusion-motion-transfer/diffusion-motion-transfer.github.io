@@ -30,6 +30,7 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+<!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css" integrity="sha384-BY+fdrpOd3gfeRvTSMT+VUZmA728cfF9Z2G42xpaRkUGu2i3DyzpTURDo5A6CaLK" crossorigin="anonymous">-->
     <link rel="stylesheet" href="static/css/index.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
@@ -64,9 +65,37 @@
                     <div class="is-size-5 publication-authors">
                         <!-- Paper authors -->
                         <span class="author-block">
-                <a target="_blank">Anonymous Submisssion</a>
-              </span>
-                    </div>
+                        <a href="https://michalgeyer.my.canva.site/" target="_blank">Danah Yatim</a><sup>*</sup>,</span>
+                        <span class="author-block">
+                        <a href="https://www.linkedin.com/in/rafail-fridman/" target="_blank">Rafail Fridman</a><sup>*</sup>,</span>
+                          <span class="author-block">
+                          <a href="https://omerbt.github.io" target="_blank">Omer Bar-Tal</a>,</span>
+                          <span class="author-block">
+                            <a href="https://ykasten.github.io/" target="_blank">Yoni Kasten</a>,
+                          </span>
+                          <span class="author-block">
+                            <a href="https://www.weizmann.ac.il/math/dekel/" target="_blank">Tali Dekel</a>
+                          </span>
+                          </div>
+
+                          <div class="is-size-5 publication-authors">
+                            <span class="author-block">Weizmann institute of science</span>
+                            <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+                          </div>
+
+                          <div class="column has-text-centered">
+                            <div class="publication-links">
+                                 <!-- Arxiv PDF link -->
+                              <span class="link-block">
+                                <a href='./TokenFlow_Arxiv.pdf' target="_blank"
+                                class="external-link button is-normal is-rounded is-dark">
+                                <span class="icon">
+                                  <i class="fas fa-file-pdf"></i>
+                                </span>
+                                <span>Paper</span>
+                              </a>
+                            </span>
+
                     <!-- Supplementary PDF link -->
                     <span class="link-block">
                       <a href="sm/index.html" target="_blank"
@@ -445,9 +474,7 @@
                         variations in appearance and shape, we introduce a new feature descriptor termed
                         <strong>Spatial Marginal Mean (SMM)</strong>:
                         </p>
-                        <p align="center">
-                         $\texttt{SMM}[\boldsymbol{f}(\boldsymbol{x}_t)] = \frac{1}{M\cdot N} \sum_{i=1}^M \sum_{j=1}^N \boldsymbol{f}(\boldsymbol{x}_t)_{i,j}$
-                        </p>
+                         $$\texttt{SMM}[\boldsymbol{f}(\boldsymbol{x}_t)] = \frac{1}{M\cdot N} \sum_{i=1}^M \sum_{j=1}^N \boldsymbol{f}(\boldsymbol{x}_t)_{i,j}$$
                         <p>
                         This descriptor is obtained by averaging the space-time features along the spatial dimensions.
                         Despite collapsing the spatial dimensions, the SMM features retain information about objects' pose and semantic layout,
@@ -512,7 +539,7 @@
 </section>
 <!--End paper poster -->
 
-<section class="hero is-small">
+<section class="hero is-small is-light">
     <div class="hero-body">
         <div class="container is-max-desktop">
             <div class="columns is-centered has-text-centered">
@@ -529,7 +556,36 @@
 
                         <img src="sm/assets/pics/pipeline.png" alt="pipeline" width="100%">
 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
+<section class="hero is-small">
+    <div class="hero-body">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-">
+                    <h2 class="title is-3">Motion-Fidelity Evaluation</h2>
+                    <div class="content has-text-justified">
+                      We aim to assess the fidelity of our results in preserving the original motion. Given our task
+                        involves structural deviations, there is no alignment between pixels in the original and output videos.
+                        Consequentially, traditional metrics such as comparing optical-flow fields are unsuitable for our use case.
+                        We thus introduce a new metric, based on similarity between unaligned long-trajectories. For two sets of
+                        trajectories $\mathcal{T}$ and $\tilde{\mathcal{T}}$ extracted from the original and output videos, respectively, the metric is defined as:
+                        $$\frac{1}{m}\sum_{\tilde{\tau}\in \tilde{\mathcal{T}}} \underset{\tau \in \mathcal{T} }{\text{max}} \ \textbf{corr} (\tau,\tilde{\tau})+\frac{1}{n}\sum_{{\tau}\in {\mathcal{T}}} \underset{\tilde{\tau} \in \tilde{\mathcal{T}} }{\text{max}} \ \textbf{corr} (\tau,\tilde{\tau})$$
+                        where the correlation between two tracklets $\textbf{corr}(\tau,\tilde{\tau})$ is computed as follows, similarly to CITE:
+                        $$\textbf{corr}(\tau,\tilde{\tau}) =  \dfrac{1}{F}\sum_{k=1}^F\dfrac{{v_k^x \cdot \tilde{v}_k^x + v_k^y \cdot \tilde{v}_k^y}}{{\sqrt{(v_k^x)^2 + (v_k^y)^2} \cdot \sqrt{(\tilde{v}_k^x)^2 + (\tilde{v}_k^y)^2}}}$$
+
+                        Our method outperforms the baselines by achieving both high fidelity to the target text prompt (CLIP text similarity score) and the original motion (Motion-Fidelity Score).
+                        <br>
+                        <br>
+
+                        <div style="text-align: center;">
+                            <img src="sm/assets/pics/metrics.png" alt="motion_fidelity" width="50%">
+                        </div>
 
                     </div>
                 </div>
@@ -540,45 +596,45 @@
 
 <!-- OVERLAY VIDEOS -->
 
-<!--<section class="hero is-light">-->
-<!--    <div class="hero-body">-->
-<!--        <div class="container is-max-desktop">-->
-<!--            <div class="columns is-centered has-text-centered">-->
-<!--                <div class="column">-->
-<!--                    <h2 class="title is-3">Motion Transfer results</h2>-->
-<!--                    <div class="content has-text-justified">-->
-<!--                            <p style="margin-top: -12px;">-->
-<!--                                Hover over the videos to see the original video and text prompts. Please see our-->
-<!--                                <a style="color: blue" href="./sm/supp.html">Supplementary Materials</a> for more results.-->
-<!--                            </p>-->
-<!--                        <div class="video-wrapper">-->
-<!--                            <video preload="auto" class="hover-video" src="sm/assets/results/dog/original.mp4"-->
-<!--                                   preload="metadata" autoplay loop muted></video>-->
-<!--                            <video preload="auto" class="default-video" src="sm/assets/results/dog/lion.mp4"-->
-<!--                                   preload="metadata" autoplay controls loop muted></video>-->
-<!--                            <div class="overlay-text">A lion sitting in a forest</div>-->
-<!--                        </div>-->
-<!--                        <div class="video-wrapper">-->
-<!--                            <video preload="auto" class="hover-video" src="sm/assets/results/dog/original.mp4"-->
-<!--                                   preload="metadata" autoplay loop muted></video>-->
-<!--                            <video preload="auto" class="default-video" src="sm/assets/results/dog/dragon.mp4"-->
-<!--                                   preload="metadata" autoplay controls loop muted></video>-->
-<!--                            <div class="overlay-text">A dragon sitting in a floral forest</div>-->
-<!--                        </div>-->
-<!--                        <div class="video-wrapper">-->
-<!--                            <video preload="auto" class="hover-video" src="sm/assets/results/car-turn/original.mp4"-->
-<!--                                   preload="metadata" autoplay loop muted></video>-->
-<!--                            <video preload="auto" class="default-video" src="sm/assets/results/car-turn/bike.mp4"-->
-<!--                                   preload="metadata" autoplay controls loop muted></video>-->
-<!--                            <div class="overlay-text">A bike driving in a snowy forest</div>-->
-<!--                        </div>-->
-<!--                        <div class="video-wrapper">-->
-<!--                            <video preload="auto" class="hover-video" src="sm/assets/results/car-turn/original.mp4"-->
-<!--                                   preload="metadata" autoplay loop muted></video>-->
-<!--                            <video preload="auto" class="default-video" src="sm/assets/results/car-turn/train.mp4"-->
-<!--                                   preload="metadata" autoplay controls loop muted></video>-->
-<!--                            <div class="overlay-text">A train riding on rails in autumn view</div>-->
-<!--                        </div>-->
+<section class="hero is-light">
+    <div class="hero-body">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column">
+                    <h2 class="title is-3">Motion Transfer Results</h2>
+                    <div class="content has-text-justified">
+                            <p style="margin-top: -12px;">
+                                Hover over the videos to see the original video and text prompts. Please see our
+                                <a style="color: blue" href="./sm/supp.html">Supplementary Materials</a> for more results.
+                            </p>
+                        <div class="video-wrapper">
+                            <video preload="auto" class="hover-video" src="sm/assets/results/dog/original.mp4"
+                                   preload="metadata" autoplay loop muted></video>
+                            <video preload="auto" class="default-video" src="sm/assets/results/dog/lion.mp4"
+                                   preload="metadata" autoplay controls loop muted></video>
+                            <div class="overlay-text">A lion sitting in a forest</div>
+                        </div>
+                        <div class="video-wrapper">
+                            <video preload="auto" class="hover-video" src="sm/assets/results/dog/original.mp4"
+                                   preload="metadata" autoplay loop muted></video>
+                            <video preload="auto" class="default-video" src="sm/assets/results/dog/dragon.mp4"
+                                   preload="metadata" autoplay controls loop muted></video>
+                            <div class="overlay-text">A dragon sitting in a floral forest</div>
+                        </div>
+                        <div class="video-wrapper">
+                            <video preload="auto" class="hover-video" src="sm/assets/results/car-turn/original.mp4"
+                                   preload="metadata" autoplay loop muted></video>
+                            <video preload="auto" class="default-video" src="sm/assets/results/car-turn/bike.mp4"
+                                   preload="metadata" autoplay controls loop muted></video>
+                            <div class="overlay-text">A bike driving in a snowy forest</div>
+                        </div>
+                        <div class="video-wrapper">
+                            <video preload="auto" class="hover-video" src="sm/assets/results/car-turn/original.mp4"
+                                   preload="metadata" autoplay loop muted></video>
+                            <video preload="auto" class="default-video" src="sm/assets/results/car-turn/train.mp4"
+                                   preload="metadata" autoplay controls loop muted></video>
+                            <div class="overlay-text">A train riding on rails in autumn view</div>
+                        </div>
 <!--                        <div class="video-wrapper">-->
 <!--                            <video preload="auto" class="default-video" src="sm/assets/results/dog_jump/horse.mp4"-->
 <!--                                   preload="metadata" autoplay loop muted></video>-->
@@ -705,34 +761,44 @@
 <!--                                   preload="metadata" autoplay controls loop muted></video>-->
 <!--                            <div class="overlay-text">A bus driving on a road</div>-->
 <!--                        </div>-->
-<!--                        <div class="video-wrapper">-->
-<!--                            <video preload="auto" class="hover-video" src="sm/assets/results/bear/original.mp4"-->
-<!--                                   preload="metadata" autoplay loop muted></video>-->
-<!--                            <video preload="auto" class="default-video" src="sm/assets/results/bear/elephant.mp4"-->
-<!--                                   preload="metadata" autoplay controls loop muted></video>-->
-<!--                            <div class="overlay-text">An elephant walking on the rocks</div>-->
-<!--                        </div>-->
-<!--                        <div class="video-wrapper" style="float: right">-->
-<!--                            <video preload="auto" class="hover-video" src="sm/assets/results/bear/original.mp4"-->
-<!--                                   preload="metadata" autoplay loop muted></video>-->
-<!--                            <video preload="auto" class="default-video" src="sm/assets/results/bear/camel.mp4"-->
-<!--                                   preload="metadata" autoplay controls loop muted></video>-->
-<!--                            <div class="overlay-text">A camel walking on icy rocks in antarctica</div>-->
-<!--                        </div>-->
+                        <div class="video-wrapper">
+                            <video preload="auto" class="hover-video" src="sm/assets/results/bear/original.mp4"
+                                   preload="metadata" autoplay loop muted></video>
+                            <video preload="auto" class="default-video" src="sm/assets/results/bear/elephant.mp4"
+                                   preload="metadata" autoplay controls loop muted></video>
+                            <div class="overlay-text">An elephant walking on the rocks</div>
+                        </div>
+                        <div class="video-wrapper" style="float: right">
+                            <video preload="auto" class="hover-video" src="sm/assets/results/bear/original.mp4"
+                                   preload="metadata" autoplay loop muted></video>
+                            <video preload="auto" class="default-video" src="sm/assets/results/bear/camel.mp4"
+                                   preload="metadata" autoplay controls loop muted></video>
+                            <div class="overlay-text">A camel walking on icy rocks in antarctica</div>
+                        </div>
 
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<!--</section>-->
+</section>
 
 
 <!-- End video preload="auto"carousel -->
 
 <!--BibTex citation -->
-
+<section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@article{tokenflow2023,
+        title = {Space-Time Diffusion Features for Zero-Shot Text-Driven Motion Transfer},
+        author = {Yatim, Danah and Fridman, Rafail and Bar-Tal, Omer and Kasten, Yoni and Dekel, Tali},
+        journal={arXiv preprint arxiv:CNAHGEME},
+        year={2023}
+        }</code></pre>
+    </div>
+</section>
 <!--End BibTex citation -->
 
 <!--<section class="hero is-small">-->
