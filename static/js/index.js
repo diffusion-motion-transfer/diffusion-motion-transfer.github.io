@@ -44,7 +44,7 @@ $('#slick').slick({
   dots: false,
   arrows: true,
   speed: 1000,
-  adaptiveHeight: true,
+  adaptiveHeight: false,
   useTransform: false, // fix for safari
 
   mobileFirst: true,

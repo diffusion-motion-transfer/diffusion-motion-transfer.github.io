@@ -345,7 +345,7 @@ body {
 
 /* bootstrap 4 multi-col carousel */
 #slick {
-  display: none;
+  /*display: none;*/
 
   &.slick-initialized {
     display: block;
