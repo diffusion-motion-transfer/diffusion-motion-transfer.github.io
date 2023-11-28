@@ -453,3 +453,14 @@ body {
 .content table td, .content table th{
   border-width: 0 0 0;
 }
+
+#carousel {
+  /* Default width for small screens or when no media query matches */
+  width: 100%;
+
+  /* Media query for screens with a minimum width of 768 pixels (adjust as needed) */
+  @media screen and (min-width: 768px) {
+    /* Set the width to 60% for larger screens */
+    width: 60%;
+  }
+}
