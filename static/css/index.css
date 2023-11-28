@@ -464,3 +464,14 @@ body {
     width: 60%;
   }
 }
+
+#metrics_image {
+  /* Default width for small screens or when no media query matches */
+  width: 100%;
+
+  /* Media query for screens with a minimum width of 768 pixels (adjust as needed) */
+  @media screen and (min-width: 768px) {
+    /* Set the width to 60% for larger screens */
+    width: 50%;
+  }
+}
